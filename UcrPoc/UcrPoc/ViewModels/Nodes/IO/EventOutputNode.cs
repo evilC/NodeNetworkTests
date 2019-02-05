@@ -37,7 +37,8 @@ namespace UcrPoc.ViewModels.Nodes.IO
                 {
                     return;
                 }
-                LabelContent = ((DateTime)newValue).ToString("hh:mm:ss.fff");
+
+                if (newValue != null) LabelContent = ((DateTime) newValue).ToString("hh:mm:ss.fff");
             });
         }
     }
