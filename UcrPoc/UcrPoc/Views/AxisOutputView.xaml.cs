@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReactiveUI;
 using UcrPoc.ViewModels.Nodes;
+using UcrPoc.ViewModels.Nodes.IO;
 
 namespace UcrPoc.Views
 {

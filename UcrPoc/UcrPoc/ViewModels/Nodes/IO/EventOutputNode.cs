@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
-using NodeNetwork.Views;
 using ReactiveUI;
-using UcrPoc.Models;
 using UcrPoc.Views;
 
-namespace UcrPoc.ViewModels.Nodes
+namespace UcrPoc.ViewModels.Nodes.IO
 {
     public class EventOutputNode : NodeViewModel
     {

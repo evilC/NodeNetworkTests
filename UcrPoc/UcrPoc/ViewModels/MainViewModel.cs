@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using ReactiveUI;
 using System.Windows.Input;
 using UcrPoc.ViewModels.Nodes;
+using UcrPoc.ViewModels.Nodes.IO;
 
 namespace UcrPoc.ViewModels
 {

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using ReactiveUI;
 using UcrPoc.Views;
 
-namespace UcrPoc.ViewModels.Nodes
+namespace UcrPoc.ViewModels.Nodes.IO
 {
     public class ButtonOutputNode : NodeViewModel
     {

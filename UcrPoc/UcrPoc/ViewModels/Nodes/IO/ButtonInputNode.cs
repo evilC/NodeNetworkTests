@@ -1,16 +1,10 @@
-﻿using NodeNetwork.Toolkit.ValueNode;
+﻿using System.Reactive.Subjects;
+using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reactive.Linq;
-using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace UcrPoc.ViewModels.Nodes
+namespace UcrPoc.ViewModels.Nodes.IO
 {
     public class ButtonInputNode : NodeViewModel
     {

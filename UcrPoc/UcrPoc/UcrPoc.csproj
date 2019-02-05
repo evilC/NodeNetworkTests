@@ -149,15 +149,15 @@
     <Compile Include="ViewModels\AxisEditorViewModel.cs" />
     <Compile Include="ViewModels\ButtonPortViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\Nodes\AxisInputNode.cs" />
-    <Compile Include="ViewModels\Nodes\AxisOutputNode.cs" />
+    <Compile Include="ViewModels\Nodes\IO\AxisInputNode.cs" />
+    <Compile Include="ViewModels\Nodes\IO\AxisOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisRangeToButtonsNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
-    <Compile Include="ViewModels\Nodes\ButtonInputNode.cs" />
-    <Compile Include="ViewModels\Nodes\ButtonOutputNode.cs" />
+    <Compile Include="ViewModels\Nodes\IO\ButtonInputNode.cs" />
+    <Compile Include="ViewModels\Nodes\IO\ButtonOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\ButtonsToAxisNode.cs" />
-    <Compile Include="ViewModels\Nodes\EventInputNode.cs" />
-    <Compile Include="ViewModels\Nodes\EventOutputNode.cs" />
+    <Compile Include="ViewModels\Nodes\IO\EventInputNode.cs" />
+    <Compile Include="ViewModels\Nodes\IO\EventOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\EventToButtonNode.cs" />
     <Compile Include="Views\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
