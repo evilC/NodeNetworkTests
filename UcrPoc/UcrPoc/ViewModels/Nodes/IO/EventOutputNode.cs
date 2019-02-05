@@ -33,11 +33,6 @@ namespace UcrPoc.ViewModels.Nodes.IO
             Inputs.Add(input);
             input.ValueChanged.Subscribe(newValue =>
             {
-                if (Position == new Point(0, 0))
-                {
-                    return;
-                }
-
                 if (newValue != null) LabelContent = ((DateTime) newValue).ToString("hh:mm:ss.fff");
             });
         }

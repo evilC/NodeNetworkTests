@@ -37,10 +37,6 @@ namespace UcrPoc.ViewModels.Nodes
             
             input.ValueChanged.Subscribe(newValue =>
             {
-                if (Position == new Point(0, 0))
-                {
-                    return;
-                }
                 if (newValue < 0)
                 {
                     _outputs[0].OnNext(true);
