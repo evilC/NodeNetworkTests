@@ -32,9 +32,11 @@ namespace UcrPoc.ViewModels
             ListViewModel.AddNodeType(() => new ButtonOutputNode());
             ListViewModel.AddNodeType(() => new EventInputNode());
             ListViewModel.AddNodeType(() => new EventOutputNode());
+
             ListViewModel.AddNodeType(() => new AxisToButtonsNode());
             ListViewModel.AddNodeType(() => new ButtonsToAxisNode());
-            ListViewModel.AddNodeType(() => new AxisRangeToButtonsNode());
+            //ListViewModel.AddNodeType(() => new AxisRangeToButtonsNode());
+            ListViewModel.AddNodeType(() => new EventToButtonNode());
         }
 
         public void OnSave()

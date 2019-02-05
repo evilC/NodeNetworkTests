@@ -158,6 +158,7 @@
     <Compile Include="ViewModels\Nodes\ButtonsToAxisNode.cs" />
     <Compile Include="ViewModels\Nodes\EventInputNode.cs" />
     <Compile Include="ViewModels\Nodes\EventOutputNode.cs" />
+    <Compile Include="ViewModels\Nodes\EventToButtonNode.cs" />
     <Compile Include="Views\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>
