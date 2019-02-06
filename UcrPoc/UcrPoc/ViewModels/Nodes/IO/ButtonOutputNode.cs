@@ -23,7 +23,7 @@ namespace UcrPoc.ViewModels.Nodes.IO
 
         public ButtonOutputNode()
         {
-            Name = "Button\nOutput";
+            Name = "Button Output";
 
             var input = new ValueNodeInputViewModel<bool?>()
             {

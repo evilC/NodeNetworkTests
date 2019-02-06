@@ -17,7 +17,7 @@ namespace UcrPoc.ViewModels.Nodes.IO
 
         public ButtonInputNode()
         {
-            Name = "Button\nInput";
+            Name = "Button Input";
 
             var buttonInput = new ButtonInputViewModel(OnButtonEvent)
             {

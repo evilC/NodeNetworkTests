@@ -26,7 +26,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public ButtonsToAxisNode()
         {
-            Name = "Buttons\nTo Axis";
+            Name = "Buttons To Axis";
 
             _inputLow = new ValueNodeInputViewModel<bool?>()
             {

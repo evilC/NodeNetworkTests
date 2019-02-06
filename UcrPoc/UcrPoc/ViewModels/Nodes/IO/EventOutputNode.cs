@@ -24,7 +24,7 @@ namespace UcrPoc.ViewModels.Nodes.IO
 
         public EventOutputNode()
         {
-            Name = "Event\nOutput";
+            Name = "Event Output";
 
             var input = new ValueNodeInputViewModel<DateTime?>()
             {

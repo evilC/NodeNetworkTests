@@ -19,7 +19,7 @@ namespace UcrPoc.ViewModels.Nodes.IO
 
         public AxisInputNode()
         {
-            Name = "Axis\nInput";
+            Name = "Axis Input";
 
             this.WhenAnyValue(vm => vm._valueEditor.Value).Subscribe(newValue =>
             {
