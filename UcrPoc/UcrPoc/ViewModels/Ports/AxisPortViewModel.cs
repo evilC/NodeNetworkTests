@@ -1,6 +1,6 @@
 ﻿using NodeNetwork.ViewModels;
 using ReactiveUI;
-using UcrPoc.Views;
+using UcrPoc.Views.Ports;
 
 namespace UcrPoc.ViewModels.Ports
 {

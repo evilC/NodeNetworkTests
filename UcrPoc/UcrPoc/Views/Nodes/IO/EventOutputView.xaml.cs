@@ -17,19 +17,19 @@ using ReactiveUI;
 using UcrPoc.ViewModels.Nodes;
 using UcrPoc.ViewModels.Nodes.IO;
 
-namespace UcrPoc.Views
+namespace UcrPoc.Views.Nodes.IO
 {
     /// <summary>
-    /// Interaction logic for OutputAxisView.xaml
+    /// Interaction logic for EventOutputView.xaml
     /// </summary>
-    public partial class AxisOutputView : IViewFor<AxisOutputNode>
+    public partial class EventOutputView : IViewFor<EventOutputNode>
     {
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
-            typeof(AxisOutputNode), typeof(AxisOutputView), new PropertyMetadata(null));
-        public AxisOutputNode ViewModel { get => (AxisOutputNode)GetValue(ViewModelProperty); set => SetValue(ViewModelProperty, value); }
-        object IViewFor.ViewModel { get => ViewModel; set => ViewModel = (AxisOutputNode)value; }
+            typeof(EventOutputNode), typeof(EventOutputView), new PropertyMetadata(null));
+        public EventOutputNode ViewModel { get => (EventOutputNode)GetValue(ViewModelProperty); set => SetValue(ViewModelProperty, value); }
+        object IViewFor.ViewModel { get => ViewModel; set => ViewModel = (EventOutputNode)value; }
 
-        public AxisOutputView()
+        public EventOutputView()
         {
             DataContext = ViewModel;
             InitializeComponent();

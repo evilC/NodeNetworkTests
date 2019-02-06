@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using UcrPoc.ViewModels;
 using UcrPoc.ViewModels.Editors;
 
-namespace UcrPoc.Views
+namespace UcrPoc.Views.Editors
 {
     /// <summary>
     /// Interaction logic for IntegerValueEditorView.xaml

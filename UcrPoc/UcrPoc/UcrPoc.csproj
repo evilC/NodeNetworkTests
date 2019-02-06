@@ -161,25 +161,25 @@
     <Compile Include="ViewModels\Nodes\IO\EventInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\EventOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\EventToButtonNode.cs" />
-    <Compile Include="Views\AxisPortView.xaml.cs">
+    <Compile Include="Views\Ports\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ButtonInputView.xaml.cs">
+    <Compile Include="Views\Nodes\IO\ButtonInputView.xaml.cs">
       <DependentUpon>ButtonInputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ButtonOutputView.xaml.cs">
+    <Compile Include="Views\Nodes\IO\ButtonOutputView.xaml.cs">
       <DependentUpon>ButtonOutputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AxisEditorView.xaml.cs">
+    <Compile Include="Views\Editors\AxisEditorView.xaml.cs">
       <DependentUpon>AxisEditorView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AxisOutputView.xaml.cs">
+    <Compile Include="Views\Nodes\IO\AxisOutputView.xaml.cs">
       <DependentUpon>AxisOutputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ButtonPortView.xaml.cs">
+    <Compile Include="Views\Ports\ButtonPortView.xaml.cs">
       <DependentUpon>ButtonPortView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EventOutputView.xaml.cs">
+    <Compile Include="Views\Nodes\IO\EventOutputView.xaml.cs">
       <DependentUpon>EventOutputView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -194,31 +194,31 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\AxisPortView.xaml">
+    <Page Include="Views\Ports\AxisPortView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ButtonInputView.xaml">
+    <Page Include="Views\Nodes\IO\ButtonInputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ButtonOutputView.xaml">
+    <Page Include="Views\Nodes\IO\ButtonOutputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AxisEditorView.xaml">
+    <Page Include="Views\Editors\AxisEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AxisOutputView.xaml">
+    <Page Include="Views\Nodes\IO\AxisOutputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ButtonPortView.xaml">
+    <Page Include="Views\Ports\ButtonPortView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EventOutputView.xaml">
+    <Page Include="Views\Nodes\IO\EventOutputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

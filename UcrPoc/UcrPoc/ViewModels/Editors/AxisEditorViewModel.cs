@@ -1,6 +1,6 @@
 ﻿using NodeNetwork.Toolkit.ValueNode;
 using ReactiveUI;
-using UcrPoc.Views;
+using UcrPoc.Views.Editors;
 
 namespace UcrPoc.ViewModels.Editors
 {
