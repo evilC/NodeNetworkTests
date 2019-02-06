@@ -12,8 +12,8 @@
             <ControlTemplate>
                 <!--<Ellipse Width="{Binding ViewModel.Size, ElementName=Element}"/>-->
                 <Viewbox StretchDirection="Both" Stretch="Uniform">
-                    <Grid Width="40" Height="40">
-                        <Path Fill="White" Stroke="Black" Data="M 0 0 L 40 0 L 40 40 L 0 40 " HorizontalAlignment="Center"/>
+                    <Grid Width="50" Height="50">
+                        <Path Fill="WhiteSmoke" Stroke="DarkGray" StrokeThickness="4" Data="M 0 0 L 40 0 L 40 40 L 0 40 L 0 0 " HorizontalAlignment="Center"/>
                     </Grid>
                 </Viewbox>
             </ControlTemplate>
