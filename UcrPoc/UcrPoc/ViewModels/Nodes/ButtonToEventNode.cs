@@ -33,6 +33,7 @@ namespace UcrPoc.ViewModels.Nodes
             Inputs.Add(input);
             input.ValueChanged.Subscribe(newValue =>
             {
+                if (newValue == null || !(bool)newValue) return;
                 _output.OnNext(DateTime.Now);
             });
 
