@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReactiveUI;
 using UcrPoc.ViewModels;
+using UcrPoc.ViewModels.Ports;
 
 namespace UcrPoc.Views
 {

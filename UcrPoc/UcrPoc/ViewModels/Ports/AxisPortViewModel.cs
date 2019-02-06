@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NodeNetwork.ViewModels;
+﻿using NodeNetwork.ViewModels;
 using ReactiveUI;
 using UcrPoc.Views;
 
-namespace UcrPoc.ViewModels
+namespace UcrPoc.ViewModels.Ports
 {
     public class AxisPortViewModel : PortViewModel
     {
