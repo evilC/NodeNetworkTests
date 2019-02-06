@@ -38,6 +38,7 @@ namespace UcrPoc.ViewModels
             ListViewModel.AddNodeType(() => new ButtonsToAxisNode());
             //ListViewModel.AddNodeType(() => new AxisRangeToButtonsNode());
             ListViewModel.AddNodeType(() => new EventToButtonNode());
+            ListViewModel.AddNodeType(() => new DynamicButtonToAxisNode());
         }
 
         public void OnSave()

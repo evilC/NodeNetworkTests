@@ -149,6 +149,7 @@
     <Compile Include="ViewModels\AxisEditorViewModel.cs" />
     <Compile Include="ViewModels\ButtonPortViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Nodes\DynamicButtonToAxisNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\AxisInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\AxisOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisRangeToButtonsNode.cs" />
