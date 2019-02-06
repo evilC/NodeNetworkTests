@@ -45,7 +45,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public void AddInput()
         {
-            var vm = new ValueNodeInputViewModel<bool?> {Name = $"Input {_inputs.Count + 1}"};
+            var vm = new ValueNodeInputViewModel<bool?> {Name = $"Input {_inputs.Count + 1}", Port = new ButtonPortViewModel()};
             _inputs.Add(vm);
             Inputs.Add(vm);
         }
