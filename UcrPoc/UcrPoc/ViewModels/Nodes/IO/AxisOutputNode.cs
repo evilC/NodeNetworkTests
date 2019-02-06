@@ -23,7 +23,7 @@ namespace UcrPoc.ViewModels.Nodes.IO
 
         public AxisOutputNode()
         {
-            Name = "Axis Output";
+            Name = "Axis\nOutput";
 
             var input = new ValueNodeInputViewModel<short?>()
             {

@@ -24,7 +24,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public AxisRangeToButtonsNode()
         {
-            Name = "Axis Range to Buttons";
+            Name = "Axis Range\nTo Buttons\n(Broken)";
 
             var input = new ValueNodeInputViewModel<short?>
             {

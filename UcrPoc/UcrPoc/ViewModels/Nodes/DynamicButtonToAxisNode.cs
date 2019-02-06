@@ -23,7 +23,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public DynamicButtonToAxisNode()
         {
-            Name = "Dynamic\nButtons\nTo Axis";
+            Name = "Dynamic\nButtons\nTo Axis\n(Broken)";
 
             var buttonInput = new ButtonInputViewModel(OnAddInput) { Name = "AddOutput", ButtonLabel = "Add Input" };
             Inputs.Add(buttonInput);

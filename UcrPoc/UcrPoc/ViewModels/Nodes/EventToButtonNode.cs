@@ -23,7 +23,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public EventToButtonNode()
         {
-            Name = "Event To Button";
+            Name = "Event To\nButton";
 
             var input = new ValueNodeInputViewModel<DateTime?>()
             {

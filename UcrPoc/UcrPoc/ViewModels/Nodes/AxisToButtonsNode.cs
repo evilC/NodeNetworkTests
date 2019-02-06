@@ -23,7 +23,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public AxisToButtonsNode()
         {
-            Name = "Axis To Buttons";
+            Name = "Axis To\nButtons";
 
             var input = new ValueNodeInputViewModel<short?>()
             {
