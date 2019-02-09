@@ -144,6 +144,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\EventObj.cs" />
+    <Compile Include="ViewModels\Nodes\AxisInverterNode.cs" />
     <Compile Include="ViewModels\Ports\AxisPortViewModel.cs" />
     <Compile Include="ViewModels\ButtonInputViewModel.cs" />
     <Compile Include="ViewModels\Editors\AxisEditorViewModel.cs" />
