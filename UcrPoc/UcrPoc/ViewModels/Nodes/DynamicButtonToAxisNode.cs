@@ -9,6 +9,7 @@ using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
 using UcrPoc.ViewModels.Ports;
+using UcrPoc.Views.Nodes;
 
 namespace UcrPoc.ViewModels.Nodes
 {
@@ -19,7 +20,8 @@ namespace UcrPoc.ViewModels.Nodes
 
         static DynamicButtonToAxisNode()
         {
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<DynamicButtonToAxisNode>));
+            //Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<DynamicButtonToAxisNode>));
+            Splat.Locator.CurrentMutable.Register(() => new DynamicButtonToAxisView(), typeof(IViewFor<DynamicButtonToAxisNode>));
         }
 
         public DynamicButtonToAxisNode()

@@ -41,11 +41,11 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="NodeNetwork, Version=3.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NodeNetwork.3.0.8\lib\net47\NodeNetwork.dll</HintPath>
+    <Reference Include="NodeNetwork, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NodeNetwork.3.1.0\lib\net47\NodeNetwork.dll</HintPath>
     </Reference>
-    <Reference Include="NodeNetworkToolkit, Version=3.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NodeNetworkToolkit.3.0.8\lib\net47\NodeNetworkToolkit.dll</HintPath>
+    <Reference Include="NodeNetworkToolkit, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NodeNetworkToolkit.3.1.0\lib\net47\NodeNetworkToolkit.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="ReactiveUI, Version=9.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -167,6 +167,9 @@
     <Compile Include="Views\Editors\FloatEditorView.xaml.cs">
       <DependentUpon>FloatEditorView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Nodes\DynamicButtonToAxisView.xaml.cs">
+      <DependentUpon>DynamicButtonToAxisView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ports\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>
@@ -201,6 +204,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\Editors\FloatEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Nodes\DynamicButtonToAxisView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
