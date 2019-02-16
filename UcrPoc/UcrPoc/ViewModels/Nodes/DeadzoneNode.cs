@@ -10,6 +10,7 @@ using NodeNetwork.Views;
 using ReactiveUI;
 using UcrPoc.ViewModels.Editors;
 using UcrPoc.ViewModels.Ports;
+using UcrPoc.Views.Nodes;
 
 namespace UcrPoc.ViewModels.Nodes
 {
@@ -20,36 +21,20 @@ namespace UcrPoc.ViewModels.Nodes
         private double _scaleFactor;
         private double _deadzoneCutoff;
 
+        private readonly BehaviorSubject<int?> _deadzonePercent = new BehaviorSubject<int?>(0);
+        public int? DeadzonePercent { get => _deadzonePercent.Value; set => _deadzonePercent.OnNext(value); }
+
         static DeadzoneNode()
         {
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<DeadzoneNode>));
+            //Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<DeadzoneNode>));
+            Splat.Locator.CurrentMutable.Register(() => new DeadzoneView(), typeof(IViewFor<DeadzoneNode>));
         }
 
         public DeadzoneNode()
         {
             Name = "Deadzone";
 
-            _dzAmount = new ValueNodeInputViewModel<float?>()
-            {
-                Name = "Input",
-                Port = null,
-                Editor = new FloatEditorViewModel()
-            };
-            Inputs.Add(_dzAmount);
-
-            _dzAmount.ValueChanged.Subscribe(newValue =>
-            {
-                if (newValue == 0)
-                {
-                    _deadzoneCutoff = 0;
-                    _scaleFactor = 1.0;
-                }
-                else
-                {
-                    _deadzoneCutoff = (double) (short.MaxValue * (newValue * 0.01));
-                    _scaleFactor = short.MaxValue / (short.MaxValue - _deadzoneCutoff);
-                }
-            });
+            _deadzonePercent.Subscribe(SetDeadzone);
 
             var input = new ValueNodeInputViewModel<short?>()
             {
@@ -70,6 +55,20 @@ namespace UcrPoc.ViewModels.Nodes
                 Value = _output
             });
 
+        }
+
+        private void SetDeadzone(int? newValue)
+        {
+            if (newValue == 0)
+            {
+                _deadzoneCutoff = 0;
+                _scaleFactor = 1.0;
+            }
+            else
+            {
+                _deadzoneCutoff = (double)(short.MaxValue * (newValue * 0.01));
+                _scaleFactor = short.MaxValue / (short.MaxValue - _deadzoneCutoff);
+            }
         }
 
         private short? ApplyDeadzone(short? inValue)

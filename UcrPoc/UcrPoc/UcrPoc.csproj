@@ -167,6 +167,12 @@
     <Compile Include="Views\Editors\FloatEditorView.xaml.cs">
       <DependentUpon>FloatEditorView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Nodes\DeadzoneViewLeader.xaml.cs">
+      <DependentUpon>DeadzoneViewLeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nodes\DeadzoneView.xaml.cs">
+      <DependentUpon>DeadzoneView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Nodes\DynamicButtonToAxisView.xaml.cs">
       <DependentUpon>DynamicButtonToAxisView.xaml</DependentUpon>
     </Compile>
@@ -207,6 +213,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\Editors\FloatEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Nodes\DeadzoneViewLeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Nodes\DeadzoneView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
