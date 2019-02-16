@@ -15,7 +15,7 @@
                 <Setter Property="ContentTemplate">
                     <Setter.Value>
                         <DataTemplate>
-                            <local:LeadingControlExampleView ViewModel="{Binding }"/>
+                            <local:DynamicButtonToAxisViewLeader ViewModel="{Binding }"/>
                             <!-- Create the view and set its viewmodel to the DataContext, which is the NodeViewModel -->
                         </DataTemplate>
                     </Setter.Value>

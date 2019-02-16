@@ -19,11 +19,11 @@ namespace UcrPoc.ViewModels.Nodes
         private readonly List<ValueNodeInputViewModel<bool?>> _inputs = new List<ValueNodeInputViewModel<bool?>>();
         private readonly Subject<short?> _output = new Subject<short?>();
 
-        private readonly BehaviorSubject<bool?> _testValue = new BehaviorSubject<bool?>(false);
-        public bool? TestValue
+        private readonly BehaviorSubject<bool?> _addInputButtonState = new BehaviorSubject<bool?>(false);
+        public bool? AddInputButtonState
         {
-            get => _testValue.Value;
-            set => _testValue.OnNext(value);
+            get => _addInputButtonState.Value;
+            set => _addInputButtonState.OnNext(value);
         }
 
         static DynamicButtonToAxisNode()
@@ -36,12 +36,7 @@ namespace UcrPoc.ViewModels.Nodes
         {
             Name = "Dynamic Buttons\nTo Axis\n(Broken)";
 
-            var buttonInput = new ButtonInputViewModel(OnAddInput) { Name = "AddOutput", ButtonLabel = "Add Input" };
-            Inputs.Add(buttonInput);
-            _testValue.Subscribe(newValue =>
-            {
-                Console.WriteLine($"NewValue: {newValue}");
-            });
+            _addInputButtonState.Subscribe(OnAddInput);
 
             var output = new ValueNodeOutputViewModel<short?>
             {
@@ -52,9 +47,9 @@ namespace UcrPoc.ViewModels.Nodes
             Outputs.Add(output);
         }
 
-        private void OnAddInput(bool state)
+        private void OnAddInput(bool? state)
         {
-            if (!state) return;
+            if (state == null || (bool) !state) return;
             AddInput();
         }
 

@@ -18,13 +18,13 @@ using UcrPoc.ViewModels.Nodes;
 namespace UcrPoc.Views.Nodes
 {
     /// <summary>
-    /// Interaction logic for LeadingControlExampleView.xaml
+    /// Interaction logic for DynamicButtonToAxisViewLeader.xaml
     /// </summary>
-    public partial class LeadingControlExampleView : IViewFor<DynamicButtonToAxisNode>
+    public partial class DynamicButtonToAxisViewLeader : IViewFor<DynamicButtonToAxisNode>
     {
         #region ViewModel
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
-            typeof(DynamicButtonToAxisNode), typeof(LeadingControlExampleView), new PropertyMetadata(null));
+            typeof(DynamicButtonToAxisNode), typeof(DynamicButtonToAxisViewLeader), new PropertyMetadata(null));
 
         public DynamicButtonToAxisNode ViewModel
         {
@@ -39,11 +39,11 @@ namespace UcrPoc.Views.Nodes
         }
         #endregion
 
-        public LeadingControlExampleView()
+        public DynamicButtonToAxisViewLeader()
         {
             InitializeComponent();
 
-            this.Bind(ViewModel, vm => vm.TestValue, v => v.checkBoxTest.IsChecked);
+            this.Bind(ViewModel, vm => vm.AddInputButtonState, v => v.btnAddInput.IsPressed);
         }
     }
 }
