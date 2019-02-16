@@ -10,25 +10,17 @@
     <views:NodeView x:Name="NodeView">
         <views:NodeView.LeadingControlPresenterStyle>
             <Style TargetType="ContentPresenter">
+                <Setter Property="Content" Value="{Binding }"></Setter>
+                <!-- Set Content to the DataContext of the node, which is the NodeViewModel -->
                 <Setter Property="ContentTemplate">
                     <Setter.Value>
                         <DataTemplate>
-                            <Label Background="Blue">Example 1</Label>
+                            <local:LeadingControlExampleView ViewModel="{Binding }"/>
+                            <!-- Create the view and set its viewmodel to the DataContext, which is the NodeViewModel -->
                         </DataTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
         </views:NodeView.LeadingControlPresenterStyle>
-        <views:NodeView.TrailingControlPresenterStyle>
-            <Style TargetType="ContentPresenter">
-                <Setter Property="ContentTemplate">
-                    <Setter.Value>
-                        <DataTemplate>
-                            <Label Background="Red">Example 2</Label>
-                        </DataTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </views:NodeView.TrailingControlPresenterStyle>
     </views:NodeView>
 </UserControl>

@@ -170,6 +170,9 @@
     <Compile Include="Views\Nodes\DynamicButtonToAxisView.xaml.cs">
       <DependentUpon>DynamicButtonToAxisView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Nodes\LeadingControlExampleView.xaml.cs">
+      <DependentUpon>LeadingControlExampleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ports\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>
@@ -208,6 +211,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Nodes\DynamicButtonToAxisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Nodes\LeadingControlExampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

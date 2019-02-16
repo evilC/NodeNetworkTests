@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,13 @@ namespace UcrPoc.ViewModels.Nodes
         private readonly List<ValueNodeInputViewModel<bool?>> _inputs = new List<ValueNodeInputViewModel<bool?>>();
         private readonly Subject<short?> _output = new Subject<short?>();
 
+        private readonly BehaviorSubject<bool?> _testValue = new BehaviorSubject<bool?>(false);
+        public bool? TestValue
+        {
+            get => _testValue.Value;
+            set => _testValue.OnNext(value);
+        }
+
         static DynamicButtonToAxisNode()
         {
             //Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<DynamicButtonToAxisNode>));
@@ -30,6 +38,10 @@ namespace UcrPoc.ViewModels.Nodes
 
             var buttonInput = new ButtonInputViewModel(OnAddInput) { Name = "AddOutput", ButtonLabel = "Add Input" };
             Inputs.Add(buttonInput);
+            _testValue.Subscribe(newValue =>
+            {
+                Console.WriteLine($"NewValue: {newValue}");
+            });
 
             var output = new ValueNodeOutputViewModel<short?>
             {
