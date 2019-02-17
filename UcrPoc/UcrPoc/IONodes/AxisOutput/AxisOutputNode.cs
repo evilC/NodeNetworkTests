@@ -3,9 +3,8 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using ReactiveUI;
 using UcrPoc.ViewModels.Ports;
-using UcrPoc.Views.Nodes.IO;
 
-namespace UcrPoc.ViewModels.Nodes.IO
+namespace UcrPoc.IONodes.AxisOutput
 {
     public class AxisOutputNode : NodeViewModel
     {

@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace UcrPoc.IONodes.AxisInputNode
+namespace UcrPoc.IONodes.AxisInput
 {
     /// <summary>
     /// Interaction logic for IntegerValueEditorView.xaml

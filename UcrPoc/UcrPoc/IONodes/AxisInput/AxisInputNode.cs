@@ -6,7 +6,7 @@ using NodeNetwork.Views;
 using ReactiveUI;
 using UcrPoc.ViewModels.Ports;
 
-namespace UcrPoc.IONodes.AxisInputNode
+namespace UcrPoc.IONodes.AxisInput
 {
     public class AxisInputNode : NodeViewModel
     {

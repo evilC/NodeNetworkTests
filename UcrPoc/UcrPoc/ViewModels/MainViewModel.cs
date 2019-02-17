@@ -1,13 +1,10 @@
 ﻿using NodeNetwork.Toolkit.NodeList;
 using NodeNetwork.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ReactiveUI;
 using System.Windows.Input;
-using UcrPoc.IONodes.AxisInputNode;
+using UcrPoc.IONodes.AxisInput;
+using UcrPoc.IONodes.AxisOutput;
 using UcrPoc.Nodes.DynamicAxisToButton;
 using UcrPoc.Nodes.DynamicButtonToAxis;
 using UcrPoc.ViewModels.Nodes;

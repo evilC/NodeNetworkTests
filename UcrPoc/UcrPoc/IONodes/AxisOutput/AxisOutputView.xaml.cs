@@ -1,9 +1,8 @@
 ﻿using System.Reactive.Disposables;
 using System.Windows;
 using ReactiveUI;
-using UcrPoc.ViewModels.Nodes.IO;
 
-namespace UcrPoc.Views.Nodes.IO
+namespace UcrPoc.IONodes.AxisOutput
 {
     /// <summary>
     /// Interaction logic for OutputAxisView.xaml

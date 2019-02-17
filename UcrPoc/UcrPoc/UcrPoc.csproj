@@ -156,13 +156,13 @@
     <Compile Include="ViewModels\Nodes\DeadzoneNode.cs" />
     <Compile Include="ViewModels\Ports\AxisPortViewModel.cs" />
     <Compile Include="ViewModels\ButtonInputViewModel.cs" />
-    <Compile Include="IONodes\AxisInputNode\AxisEditorViewModel.cs" />
+    <Compile Include="IONodes\AxisInput\AxisEditorViewModel.cs" />
     <Compile Include="ViewModels\Ports\ButtonPortViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Nodes\ButtonToEventNode.cs" />
     <Compile Include="Nodes\DynamicButtonToAxis\DynamicButtonToAxisNode.cs" />
-    <Compile Include="IONodes\AxisInputNode\AxisInputNode.cs" />
-    <Compile Include="ViewModels\Nodes\IO\AxisOutputNode.cs" />
+    <Compile Include="IONodes\AxisInput\AxisInputNode.cs" />
+    <Compile Include="IONodes\AxisOutput\AxisOutputNode.cs" />
     <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\ButtonInputNode.cs" />
@@ -198,10 +198,10 @@
     <Compile Include="Views\Nodes\IO\ButtonOutputView.xaml.cs">
       <DependentUpon>ButtonOutputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IONodes\AxisInputNode\AxisEditorView.xaml.cs">
+    <Compile Include="IONodes\AxisInput\AxisEditorView.xaml.cs">
       <DependentUpon>AxisEditorView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Nodes\IO\AxisOutputView.xaml.cs">
+    <Compile Include="IONodes\AxisOutput\AxisOutputView.xaml.cs">
       <DependentUpon>AxisOutputView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Ports\ButtonPortView.xaml.cs">
@@ -266,11 +266,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IONodes\AxisInputNode\AxisEditorView.xaml">
+    <Page Include="IONodes\AxisInput\AxisEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Nodes\IO\AxisOutputView.xaml">
+    <Page Include="IONodes\AxisOutput\AxisOutputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
