@@ -4,10 +4,9 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
-using UcrPoc.ViewModels.Editors;
 using UcrPoc.ViewModels.Ports;
 
-namespace UcrPoc.ViewModels.Nodes.IO
+namespace UcrPoc.IONodes.AxisInputNode
 {
     public class AxisInputNode : NodeViewModel
     {

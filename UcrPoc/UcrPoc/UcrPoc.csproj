@@ -157,12 +157,12 @@
     <Compile Include="ViewModels\Nodes\DeadzoneNode.cs" />
     <Compile Include="ViewModels\Ports\AxisPortViewModel.cs" />
     <Compile Include="ViewModels\ButtonInputViewModel.cs" />
-    <Compile Include="ViewModels\Editors\AxisEditorViewModel.cs" />
+    <Compile Include="IONodes\AxisInputNode\AxisEditorViewModel.cs" />
     <Compile Include="ViewModels\Ports\ButtonPortViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Nodes\ButtonToEventNode.cs" />
     <Compile Include="Nodes\DynamicButtonToAxis\DynamicButtonToAxisNode.cs" />
-    <Compile Include="ViewModels\Nodes\IO\AxisInputNode.cs" />
+    <Compile Include="IONodes\AxisInputNode\AxisInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\AxisOutputNode.cs" />
     <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
@@ -202,7 +202,7 @@
     <Compile Include="Views\Nodes\IO\ButtonOutputView.xaml.cs">
       <DependentUpon>ButtonOutputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Editors\AxisEditorView.xaml.cs">
+    <Compile Include="IONodes\AxisInputNode\AxisEditorView.xaml.cs">
       <DependentUpon>AxisEditorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Nodes\IO\AxisOutputView.xaml.cs">
@@ -274,7 +274,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Editors\AxisEditorView.xaml">
+    <Page Include="IONodes\AxisInputNode\AxisEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

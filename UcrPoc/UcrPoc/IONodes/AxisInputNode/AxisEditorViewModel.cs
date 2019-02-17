@@ -1,8 +1,7 @@
 ﻿using NodeNetwork.Toolkit.ValueNode;
 using ReactiveUI;
-using UcrPoc.Views.Editors;
 
-namespace UcrPoc.ViewModels.Editors
+namespace UcrPoc.IONodes.AxisInputNode
 {
     public class AxisEditorViewModel : ValueEditorViewModel<short?>
     {
