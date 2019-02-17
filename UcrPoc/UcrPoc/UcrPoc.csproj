@@ -168,8 +168,8 @@
     <Compile Include="IONodes\ButtonInput\ButtonInputNode.cs" />
     <Compile Include="IONodes\ButtonOutput\ButtonOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\ButtonsToAxisNode.cs" />
-    <Compile Include="ViewModels\Nodes\IO\EventInputNode.cs" />
-    <Compile Include="ViewModels\Nodes\IO\EventOutputNode.cs" />
+    <Compile Include="IONodes\EventInput\EventInputNode.cs" />
+    <Compile Include="IONodes\EventOutput\EventOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\EventToButtonNode.cs" />
     <Compile Include="Nodes\DynamicAxisToButton\AxisToButtonEditorView.xaml.cs">
       <DependentUpon>AxisToButtonEditorView.xaml</DependentUpon>
@@ -207,7 +207,7 @@
     <Compile Include="Views\Ports\ButtonPortView.xaml.cs">
       <DependentUpon>ButtonPortView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Nodes\IO\EventOutputView.xaml.cs">
+    <Compile Include="IONodes\EventOutput\EventOutputView.xaml.cs">
       <DependentUpon>EventOutputView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -278,7 +278,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Nodes\IO\EventOutputView.xaml">
+    <Page Include="IONodes\EventOutput\EventOutputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -311,7 +311,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IONodes\EventInput\" />
+    <Folder Include="ViewModels\Nodes\IO\" />
+    <Folder Include="Views\Nodes\IO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

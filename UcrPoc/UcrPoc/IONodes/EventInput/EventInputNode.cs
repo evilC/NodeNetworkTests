@@ -6,7 +6,7 @@ using NodeNetwork.Views;
 using ReactiveUI;
 using UcrPoc.Widgets.TestButton;
 
-namespace UcrPoc.ViewModels.Nodes.IO
+namespace UcrPoc.IONodes.EventInput
 {
     public class EventInputNode : NodeViewModel
     {

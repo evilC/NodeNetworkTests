@@ -1,23 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reactive.Disposables;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reactive.Disposables;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ReactiveUI;
-using UcrPoc.ViewModels.Nodes;
-using UcrPoc.ViewModels.Nodes.IO;
 
-namespace UcrPoc.Views.Nodes.IO
+namespace UcrPoc.IONodes.EventOutput
 {
     /// <summary>
     /// Interaction logic for EventOutputView.xaml

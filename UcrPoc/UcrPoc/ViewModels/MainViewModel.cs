@@ -7,10 +7,11 @@ using UcrPoc.IONodes.AxisInput;
 using UcrPoc.IONodes.AxisOutput;
 using UcrPoc.IONodes.ButtonInput;
 using UcrPoc.IONodes.ButtonOutput;
+using UcrPoc.IONodes.EventInput;
+using UcrPoc.IONodes.EventOutput;
 using UcrPoc.Nodes.DynamicAxisToButton;
 using UcrPoc.Nodes.DynamicButtonToAxis;
 using UcrPoc.ViewModels.Nodes;
-using UcrPoc.ViewModels.Nodes.IO;
 
 namespace UcrPoc.ViewModels
 {
