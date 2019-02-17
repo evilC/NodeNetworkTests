@@ -1,8 +1,8 @@
-﻿using NodeNetwork.Toolkit.NodeList;
-using NodeNetwork.ViewModels;
-using System;
-using ReactiveUI;
+﻿using System;
 using System.Windows.Input;
+using NodeNetwork.Toolkit.NodeList;
+using NodeNetwork.ViewModels;
+using ReactiveUI;
 using UcrPoc.IONodes.AxisInput;
 using UcrPoc.IONodes.AxisOutput;
 using UcrPoc.IONodes.ButtonInput;
@@ -18,7 +18,7 @@ using UcrPoc.Nodes.DynamicButtonToAxis;
 using UcrPoc.Nodes.EventToButton;
 using UcrPoc.ViewModels.Nodes;
 
-namespace UcrPoc.ViewModels
+namespace UcrPoc
 {
     public class MainViewModel : ReactiveObject
     {

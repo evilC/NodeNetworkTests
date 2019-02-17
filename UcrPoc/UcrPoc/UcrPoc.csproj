@@ -158,7 +158,7 @@
     <Compile Include="Widgets\TestButton\ButtonInputViewModel.cs" />
     <Compile Include="IONodes\AxisInput\AxisEditorViewModel.cs" />
     <Compile Include="Ports\Button\ButtonPortViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="Nodes\ButtonToEvent\ButtonToEventNode.cs" />
     <Compile Include="Nodes\DynamicButtonToAxis\DynamicButtonToAxisNode.cs" />
     <Compile Include="IONodes\AxisInput\AxisInputNode.cs" />
