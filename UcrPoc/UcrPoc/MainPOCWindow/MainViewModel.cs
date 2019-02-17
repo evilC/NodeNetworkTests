@@ -18,7 +18,7 @@ using UcrPoc.Nodes.DynamicButtonToAxis;
 using UcrPoc.Nodes.EventToButton;
 using UcrPoc.ViewModels.Nodes;
 
-namespace UcrPoc
+namespace UcrPoc.MainPOCWindow
 {
     public class MainViewModel : ReactiveObject
     {
