@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using ReactiveUI;
-using UcrPoc.ViewModels;
 
 namespace UcrPoc.IONodes.ButtonInput
 {

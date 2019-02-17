@@ -1,15 +1,9 @@
-﻿using NodeNetwork.ViewModels;
-using ReactiveUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Input;
-using UcrPoc.IONodes.ButtonInput;
-using UcrPoc.Views.Nodes.IO;
+using NodeNetwork.ViewModels;
+using ReactiveUI;
 
-namespace UcrPoc.ViewModels
+namespace UcrPoc.IONodes.ButtonInput
 {
     public class ButtonInputViewModel : NodeInputViewModel
     {
