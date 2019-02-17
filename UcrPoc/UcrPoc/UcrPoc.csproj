@@ -144,7 +144,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\EventObj.cs" />
-    <Compile Include="ViewModels\Editors\AxisToButtonEditorViewModel.cs" />
+    <Compile Include="Nodes\DynamicAxisToButton\AxisToButtonEditorViewModel.cs" />
+    <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonView.xaml.cs">
+      <DependentUpon>DynamicAxisToButtonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonViewLeader.xaml.cs">
+      <DependentUpon>DynamicAxisToButtonViewLeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\Editors\ButtonToAxisEditorViewModel.cs" />
     <Compile Include="ViewModels\Editors\FloatEditorViewModel.cs" />
     <Compile Include="ViewModels\Nodes\AxisInverterNode.cs" />
@@ -158,7 +164,7 @@
     <Compile Include="ViewModels\Nodes\DynamicButtonToAxisNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\AxisInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\AxisOutputNode.cs" />
-    <Compile Include="ViewModels\Nodes\DynamicAxisToButtonNode.cs" />
+    <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\ButtonInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\ButtonOutputNode.cs" />
@@ -166,7 +172,7 @@
     <Compile Include="ViewModels\Nodes\IO\EventInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\EventOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\EventToButtonNode.cs" />
-    <Compile Include="Views\Editors\AxisToButtonEditorView.xaml.cs">
+    <Compile Include="Nodes\DynamicAxisToButton\AxisToButtonEditorView.xaml.cs">
       <DependentUpon>AxisToButtonEditorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Editors\ButtonToAxisEditorView.xaml.cs">
@@ -180,12 +186,6 @@
     </Compile>
     <Compile Include="Views\Nodes\DeadzoneView.xaml.cs">
       <DependentUpon>DeadzoneView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Nodes\DynamicAxisToButtonView.xaml.cs">
-      <DependentUpon>DynamicAxisToButtonView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Nodes\DynamicAxisToButtonViewLeader.xaml.cs">
-      <DependentUpon>DynamicAxisToButtonViewLeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Nodes\DynamicButtonToAxisView.xaml.cs">
       <DependentUpon>DynamicButtonToAxisView.xaml</DependentUpon>
@@ -226,7 +226,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Editors\AxisToButtonEditorView.xaml">
+    <Page Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonViewLeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Nodes\DynamicAxisToButton\AxisToButtonEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -243,14 +251,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Nodes\DeadzoneView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Nodes\DynamicAxisToButtonView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Nodes\DynamicAxisToButtonViewLeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

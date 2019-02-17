@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReactiveUI;
+using UcrPoc.Nodes.DynamicAxisToButton;
 using UcrPoc.ViewModels.Editors;
 
 namespace UcrPoc.Views.Editors
