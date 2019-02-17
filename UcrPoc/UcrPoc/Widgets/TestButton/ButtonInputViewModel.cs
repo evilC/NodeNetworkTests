@@ -2,8 +2,9 @@
 using System.Windows.Input;
 using NodeNetwork.ViewModels;
 using ReactiveUI;
+using UcrPoc.IONodes.ButtonInput;
 
-namespace UcrPoc.IONodes.ButtonInput
+namespace UcrPoc.Widgets.TestButton
 {
     public class ButtonInputViewModel : NodeInputViewModel
     {

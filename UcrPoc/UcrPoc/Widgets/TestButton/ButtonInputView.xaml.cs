@@ -1,8 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using ReactiveUI;
+using UcrPoc.Widgets.TestButton;
 
-namespace UcrPoc.IONodes.ButtonInput
+namespace UcrPoc.Widgets.TestButton
 {
     /// <summary>
     /// Interaction logic for ButtonInputView.xaml

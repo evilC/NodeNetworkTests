@@ -4,7 +4,7 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
-using UcrPoc.IONodes.ButtonInput;
+using UcrPoc.Widgets.TestButton;
 
 namespace UcrPoc.ViewModels.Nodes.IO
 {

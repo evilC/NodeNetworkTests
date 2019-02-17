@@ -155,7 +155,7 @@
     <Compile Include="ViewModels\Nodes\AxisInverterNode.cs" />
     <Compile Include="ViewModels\Nodes\DeadzoneNode.cs" />
     <Compile Include="ViewModels\Ports\AxisPortViewModel.cs" />
-    <Compile Include="IONodes\ButtonInput\ButtonInputViewModel.cs" />
+    <Compile Include="Widgets\TestButton\ButtonInputViewModel.cs" />
     <Compile Include="IONodes\AxisInput\AxisEditorViewModel.cs" />
     <Compile Include="ViewModels\Ports\ButtonPortViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -192,7 +192,7 @@
     <Compile Include="Views\Ports\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IONodes\ButtonInput\ButtonInputView.xaml.cs">
+    <Compile Include="Widgets\TestButton\ButtonInputView.xaml.cs">
       <DependentUpon>ButtonInputView.xaml</DependentUpon>
     </Compile>
     <Compile Include="IONodes\ButtonOutput\ButtonOutputView.xaml.cs">
@@ -258,7 +258,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IONodes\ButtonInput\ButtonInputView.xaml">
+    <Page Include="Widgets\TestButton\ButtonInputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -310,6 +310,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IONodes\EventInput\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
