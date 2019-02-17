@@ -165,7 +165,7 @@
     <Compile Include="IONodes\AxisOutput\AxisOutputNode.cs" />
     <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
-    <Compile Include="ViewModels\Nodes\IO\ButtonInputNode.cs" />
+    <Compile Include="IONodes\ButtonInput\ButtonInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\ButtonOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\ButtonsToAxisNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\EventInputNode.cs" />
@@ -192,7 +192,7 @@
     <Compile Include="Views\Ports\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Nodes\IO\ButtonInputView.xaml.cs">
+    <Compile Include="IONodes\ButtonInput\ButtonInputView.xaml.cs">
       <DependentUpon>ButtonInputView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Nodes\IO\ButtonOutputView.xaml.cs">
@@ -258,7 +258,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Nodes\IO\ButtonInputView.xaml">
+    <Page Include="IONodes\ButtonInput\ButtonInputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,9 +1,9 @@
-﻿using ReactiveUI;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
+using ReactiveUI;
 using UcrPoc.ViewModels;
 
-namespace UcrPoc.Views.Nodes.IO
+namespace UcrPoc.IONodes.ButtonInput
 {
     /// <summary>
     /// Interaction logic for ButtonInputView.xaml

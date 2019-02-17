@@ -3,9 +3,10 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
+using UcrPoc.ViewModels;
 using UcrPoc.ViewModels.Ports;
 
-namespace UcrPoc.ViewModels.Nodes.IO
+namespace UcrPoc.IONodes.ButtonInput
 {
     public class ButtonInputNode : NodeViewModel
     {
