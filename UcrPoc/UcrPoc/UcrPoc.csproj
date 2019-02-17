@@ -152,7 +152,6 @@
       <DependentUpon>DynamicAxisToButtonViewLeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="Nodes\DynamicButtonToAxis\ButtonToAxisEditorViewModel.cs" />
-    <Compile Include="ViewModels\Editors\FloatEditorViewModel.cs" />
     <Compile Include="ViewModels\Nodes\AxisInverterNode.cs" />
     <Compile Include="ViewModels\Nodes\DeadzoneNode.cs" />
     <Compile Include="ViewModels\Ports\AxisPortViewModel.cs" />
@@ -177,9 +176,6 @@
     </Compile>
     <Compile Include="Nodes\DynamicButtonToAxis\ButtonToAxisEditorView.xaml.cs">
       <DependentUpon>ButtonToAxisEditorView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Editors\FloatEditorView.xaml.cs">
-      <DependentUpon>FloatEditorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Nodes\DeadzoneViewLeader.xaml.cs">
       <DependentUpon>DeadzoneViewLeader.xaml</DependentUpon>
@@ -239,10 +235,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Nodes\DynamicButtonToAxis\ButtonToAxisEditorView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Editors\FloatEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

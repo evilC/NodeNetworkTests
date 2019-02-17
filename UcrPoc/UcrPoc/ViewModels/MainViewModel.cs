@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ReactiveUI;
 using System.Windows.Input;
+using UcrPoc.IONodes.AxisInputNode;
 using UcrPoc.Nodes.DynamicAxisToButton;
 using UcrPoc.Nodes.DynamicButtonToAxis;
 using UcrPoc.ViewModels.Nodes;
