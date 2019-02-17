@@ -16,7 +16,7 @@ namespace UcrPoc.ViewModels.Nodes
 {
     public class DynamicAxisToButtonNode : NodeViewModel
     {
-        private List<Subject<bool?>> _outputs = new List<Subject<bool?>>();
+        private List<BehaviorSubject<bool?>> _outputs = new List<BehaviorSubject<bool?>>();
         private readonly List<ValueNodeOutputViewModel<bool?>> _resultOutputs = new List<ValueNodeOutputViewModel<bool?>>();
         public bool? AddOutputButtonState { get => _addOutputButtonState.Value; set => _addOutputButtonState.OnNext(value); }
         private readonly BehaviorSubject<bool?> _addOutputButtonState = new BehaviorSubject<bool?>(false);
@@ -38,7 +38,23 @@ namespace UcrPoc.ViewModels.Nodes
             Inputs.Add(input);
             input.ValueChanged.Subscribe(newValue =>
             {
-                Console.WriteLine($@"Input changed to: {newValue}");
+                for (var i = 0; i < Outputs.Count; i++)
+                {
+                    var editor = (AxisToButtonEditorViewModel)Outputs[i].Editor;
+                    var output = _outputs[i];
+                    if (newValue >= editor.AxisFrom && newValue <= editor.AxisTo)
+                    {
+                        if (output.Value != null && !(bool) !output.Value) continue;
+                        //Console.WriteLine($@"Input changed to: {newValue}, changing output {i + 1} to true");
+                        output.OnNext(true);
+                    }
+                    else
+                    {
+                        if (output.Value == null || !(bool) output.Value) continue;
+                        //Console.WriteLine($@"Input changed to: {newValue}, changing output {i + 1} to false");
+                        output.OnNext(false);
+                    }
+                }
             });
 
             _addOutputButtonState.Subscribe(OnAddOutput);
@@ -62,7 +78,7 @@ namespace UcrPoc.ViewModels.Nodes
             });
             Outputs.Add(_resultOutputs[i]);
 
-            var ov = new Subject<bool?>();
+            var ov = new BehaviorSubject<bool?>(false);
             _outputs.Add(ov);
 
             _resultOutputs[i].Value = ov;
