@@ -9,8 +9,13 @@ using UcrPoc.IONodes.ButtonInput;
 using UcrPoc.IONodes.ButtonOutput;
 using UcrPoc.IONodes.EventInput;
 using UcrPoc.IONodes.EventOutput;
+using UcrPoc.Nodes.AxisInverter;
+using UcrPoc.Nodes.AxisToButtons;
+using UcrPoc.Nodes.ButtonsToAxis;
+using UcrPoc.Nodes.ButtonToEvent;
 using UcrPoc.Nodes.DynamicAxisToButton;
 using UcrPoc.Nodes.DynamicButtonToAxis;
+using UcrPoc.Nodes.EventToButton;
 using UcrPoc.ViewModels.Nodes;
 
 namespace UcrPoc.ViewModels

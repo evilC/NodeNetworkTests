@@ -1,18 +1,12 @@
-﻿using NodeNetwork.Toolkit.ValueNode;
+﻿using System;
+using System.Reactive.Subjects;
+using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reactive.Linq;
-using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using UcrPoc.ViewModels.Ports;
 
-namespace UcrPoc.ViewModels.Nodes
+namespace UcrPoc.Nodes.ButtonsToAxis
 {
     public class ButtonsToAxisNode : NodeViewModel
     {

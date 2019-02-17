@@ -1,33 +1,32 @@
 ﻿using System.Reactive.Disposables;
 using System.Windows;
 using ReactiveUI;
-using UcrPoc.ViewModels.Ports;
 
-namespace UcrPoc.Views.Ports
+namespace UcrPoc.Ports.Axis
 {
     /// <summary>
-    /// Interaction logic for ButtonPortView.xaml
+    /// Interaction logic for AxisPortView.xaml
     /// </summary>
-    public partial class ButtonPortView : IViewFor<ButtonPortViewModel>
+    public partial class AxisPortView : IViewFor<AxisPortViewModel>
     {
         #region ViewModel
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
-            typeof(ButtonPortViewModel), typeof(ButtonPortView), new PropertyMetadata(null));
+            typeof(AxisPortViewModel), typeof(AxisPortView), new PropertyMetadata(null));
 
-        public ButtonPortViewModel ViewModel
+        public AxisPortViewModel ViewModel
         {
-            get => (ButtonPortViewModel)GetValue(ViewModelProperty);
+            get => (AxisPortViewModel)GetValue(ViewModelProperty);
             set => SetValue(ViewModelProperty, value);
         }
 
         object IViewFor.ViewModel
         {
             get => ViewModel;
-            set => ViewModel = (ButtonPortViewModel)value;
+            set => ViewModel = (AxisPortViewModel)value;
         }
         #endregion
 
-        public ButtonPortView()
+        public AxisPortView()
         {
             InitializeComponent();
 

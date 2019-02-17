@@ -2,7 +2,7 @@
 using ReactiveUI;
 using UcrPoc.Views.Ports;
 
-namespace UcrPoc.ViewModels.Ports
+namespace UcrPoc.Ports.Button
 {
     public class ButtonPortViewModel : PortViewModel
     {

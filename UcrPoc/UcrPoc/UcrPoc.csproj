@@ -152,25 +152,25 @@
       <DependentUpon>DynamicAxisToButtonViewLeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="Nodes\DynamicButtonToAxis\ButtonToAxisEditorViewModel.cs" />
-    <Compile Include="ViewModels\Nodes\AxisInverterNode.cs" />
+    <Compile Include="Nodes\AxisInverter\AxisInverterNode.cs" />
     <Compile Include="Nodes\Deadzone\DeadzoneNode.cs" />
-    <Compile Include="ViewModels\Ports\AxisPortViewModel.cs" />
+    <Compile Include="Ports\Axis\AxisPortViewModel.cs" />
     <Compile Include="Widgets\TestButton\ButtonInputViewModel.cs" />
     <Compile Include="IONodes\AxisInput\AxisEditorViewModel.cs" />
-    <Compile Include="ViewModels\Ports\ButtonPortViewModel.cs" />
+    <Compile Include="Ports\Button\ButtonPortViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\Nodes\ButtonToEventNode.cs" />
+    <Compile Include="Nodes\ButtonToEvent\ButtonToEventNode.cs" />
     <Compile Include="Nodes\DynamicButtonToAxis\DynamicButtonToAxisNode.cs" />
     <Compile Include="IONodes\AxisInput\AxisInputNode.cs" />
     <Compile Include="IONodes\AxisOutput\AxisOutputNode.cs" />
     <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonNode.cs" />
-    <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
+    <Compile Include="Nodes\AxisToButtons\AxisToButtonsNode.cs" />
     <Compile Include="IONodes\ButtonInput\ButtonInputNode.cs" />
     <Compile Include="IONodes\ButtonOutput\ButtonOutputNode.cs" />
-    <Compile Include="ViewModels\Nodes\ButtonsToAxisNode.cs" />
+    <Compile Include="Nodes\ButtonsToAxis\ButtonsToAxisNode.cs" />
     <Compile Include="IONodes\EventInput\EventInputNode.cs" />
     <Compile Include="IONodes\EventOutput\EventOutputNode.cs" />
-    <Compile Include="ViewModels\Nodes\EventToButtonNode.cs" />
+    <Compile Include="Nodes\EventToButton\EventToButtonNode.cs" />
     <Compile Include="Nodes\DynamicAxisToButton\AxisToButtonEditorView.xaml.cs">
       <DependentUpon>AxisToButtonEditorView.xaml</DependentUpon>
     </Compile>
@@ -189,7 +189,7 @@
     <Compile Include="Nodes\DynamicButtonToAxis\DynamicButtonToAxisViewLeader.xaml.cs">
       <DependentUpon>DynamicButtonToAxisViewLeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ports\AxisPortView.xaml.cs">
+    <Compile Include="Ports\Axis\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Widgets\TestButton\ButtonInputView.xaml.cs">
@@ -204,7 +204,7 @@
     <Compile Include="IONodes\AxisOutput\AxisOutputView.xaml.cs">
       <DependentUpon>AxisOutputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ports\ButtonPortView.xaml.cs">
+    <Compile Include="Ports\Button\ButtonPortView.xaml.cs">
       <DependentUpon>ButtonPortView.xaml</DependentUpon>
     </Compile>
     <Compile Include="IONodes\EventOutput\EventOutputView.xaml.cs">
@@ -254,7 +254,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Ports\AxisPortView.xaml">
+    <Page Include="Ports\Axis\AxisPortView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -274,7 +274,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Ports\ButtonPortView.xaml">
+    <Page Include="Ports\Button\ButtonPortView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -311,7 +311,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Nodes\" />
+    <Folder Include="ViewModels\Ports\" />
+    <Folder Include="Views\Ports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
