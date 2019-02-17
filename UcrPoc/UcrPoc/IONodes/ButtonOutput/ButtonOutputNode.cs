@@ -5,7 +5,7 @@ using ReactiveUI;
 using UcrPoc.ViewModels.Ports;
 using UcrPoc.Views.Nodes.IO;
 
-namespace UcrPoc.ViewModels.Nodes.IO
+namespace UcrPoc.IONodes.ButtonOutput
 {
     public class ButtonOutputNode : NodeViewModel
     {

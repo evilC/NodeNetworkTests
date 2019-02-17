@@ -6,6 +6,7 @@ using System.Windows.Input;
 using UcrPoc.IONodes.AxisInput;
 using UcrPoc.IONodes.AxisOutput;
 using UcrPoc.IONodes.ButtonInput;
+using UcrPoc.IONodes.ButtonOutput;
 using UcrPoc.Nodes.DynamicAxisToButton;
 using UcrPoc.Nodes.DynamicButtonToAxis;
 using UcrPoc.ViewModels.Nodes;

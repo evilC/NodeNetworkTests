@@ -166,7 +166,7 @@
     <Compile Include="Nodes\DynamicAxisToButton\DynamicAxisToButtonNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
     <Compile Include="IONodes\ButtonInput\ButtonInputNode.cs" />
-    <Compile Include="ViewModels\Nodes\IO\ButtonOutputNode.cs" />
+    <Compile Include="IONodes\ButtonOutput\ButtonOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\ButtonsToAxisNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\EventInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\EventOutputNode.cs" />
@@ -195,7 +195,7 @@
     <Compile Include="IONodes\ButtonInput\ButtonInputView.xaml.cs">
       <DependentUpon>ButtonInputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Nodes\IO\ButtonOutputView.xaml.cs">
+    <Compile Include="IONodes\ButtonOutput\ButtonOutputView.xaml.cs">
       <DependentUpon>ButtonOutputView.xaml</DependentUpon>
     </Compile>
     <Compile Include="IONodes\AxisInput\AxisEditorView.xaml.cs">
@@ -262,7 +262,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Nodes\IO\ButtonOutputView.xaml">
+    <Page Include="IONodes\ButtonOutput\ButtonOutputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -310,8 +310,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IONodes\ButtonOutput\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
