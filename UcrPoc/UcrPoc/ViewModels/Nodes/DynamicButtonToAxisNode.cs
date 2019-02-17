@@ -21,11 +21,14 @@ namespace UcrPoc.ViewModels.Nodes
         private readonly Subject<short?> _output = new Subject<short?>();
 
         private readonly BehaviorSubject<bool?> _addInputButtonState = new BehaviorSubject<bool?>(false);
+
         public bool? AddInputButtonState
         {
             get => _addInputButtonState.Value;
             set => _addInputButtonState.OnNext(value);
         }
+
+        public short? DefaultSetPointValue { get; set; } = 0;
 
         static DynamicButtonToAxisNode()
         {
@@ -35,7 +38,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public DynamicButtonToAxisNode()
         {
-            Name = "Dynamic Buttons\nTo Axis\n(Broken)";
+            Name = "Dynamic Button\nTo Axis";
 
             _addInputButtonState.Subscribe(OnAddInput);
 
@@ -68,10 +71,18 @@ namespace UcrPoc.ViewModels.Nodes
             Inputs.Add(vm);
             vm.ValueChanged.Subscribe(newValue =>
             {
-                if (Inputs.Count < inputNum) return;
-                var sp = ((ButtonToAxisRangeEditorViewModel)(Inputs[inputNum].Editor)).AxisSetPoint;
-                Console.WriteLine($@"Input {inputNum + 1} changed to: {newValue} - Setpoint: {sp}");
-                _output.OnNext(sp);
+                if (Inputs.Count < inputNum || newValue == null) return;
+                var value = (bool) newValue;
+                if (value)
+                {
+                    var sp = ((ButtonToAxisRangeEditorViewModel)(Inputs[inputNum].Editor)).AxisSetPoint;
+                    _output.OnNext(sp);
+                }
+                else if (DefaultSetPointValue != null)
+                {
+                    _output.OnNext(DefaultSetPointValue);
+                }
+                //Console.WriteLine($@"Input {inputNum + 1} changed to: {newValue} - Setpoint: {sp}");
             });
         }
     }

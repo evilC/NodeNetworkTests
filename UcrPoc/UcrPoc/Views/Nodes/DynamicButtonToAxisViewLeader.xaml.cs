@@ -44,6 +44,7 @@ namespace UcrPoc.Views.Nodes
             InitializeComponent();
 
             this.Bind(ViewModel, vm => vm.AddInputButtonState, v => v.btnAddInput.IsPressed);
+            this.Bind(ViewModel, vm => vm.DefaultSetPointValue, v => v.DefaultSetPoint.Value);
         }
     }
 }
