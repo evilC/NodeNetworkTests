@@ -153,7 +153,7 @@
     </Compile>
     <Compile Include="Nodes\DynamicButtonToAxis\ButtonToAxisEditorViewModel.cs" />
     <Compile Include="ViewModels\Nodes\AxisInverterNode.cs" />
-    <Compile Include="ViewModels\Nodes\DeadzoneNode.cs" />
+    <Compile Include="Nodes\Deadzone\DeadzoneNode.cs" />
     <Compile Include="ViewModels\Ports\AxisPortViewModel.cs" />
     <Compile Include="Widgets\TestButton\ButtonInputViewModel.cs" />
     <Compile Include="IONodes\AxisInput\AxisEditorViewModel.cs" />
@@ -177,10 +177,10 @@
     <Compile Include="Nodes\DynamicButtonToAxis\ButtonToAxisEditorView.xaml.cs">
       <DependentUpon>ButtonToAxisEditorView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Nodes\DeadzoneViewLeader.xaml.cs">
+    <Compile Include="Nodes\Deadzone\DeadzoneViewLeader.xaml.cs">
       <DependentUpon>DeadzoneViewLeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Nodes\DeadzoneView.xaml.cs">
+    <Compile Include="Nodes\Deadzone\DeadzoneView.xaml.cs">
       <DependentUpon>DeadzoneView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Nodes\DynamicButtonToAxis\DynamicButtonToAxisView.xaml.cs">
@@ -238,11 +238,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Nodes\DeadzoneViewLeader.xaml">
+    <Page Include="Nodes\Deadzone\DeadzoneViewLeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Nodes\DeadzoneView.xaml">
+    <Page Include="Nodes\Deadzone\DeadzoneView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -311,8 +311,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\Nodes\IO\" />
-    <Folder Include="Views\Nodes\IO\" />
+    <Folder Include="Views\Nodes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,6 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using ReactiveUI;
 using UcrPoc.ViewModels.Ports;
-using UcrPoc.Views.Nodes;
 
 namespace UcrPoc.Nodes.DynamicButtonToAxis
 {
