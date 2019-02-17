@@ -12,18 +12,18 @@ using UcrPoc.ViewModels.Ports;
 
 namespace UcrPoc.ViewModels.Nodes
 {
-    public class AxisRangeToButtonsNode : NodeViewModel
+    public class DynamicAxisToButtonNode : NodeViewModel
     {
         private List<Subject<bool?>> _outputs = new List<Subject<bool?>>();
         private readonly List<ValueNodeOutputViewModel<bool?>> _resultOutputs = new List<ValueNodeOutputViewModel<bool?>>();
 
-        static AxisRangeToButtonsNode()
+        static DynamicAxisToButtonNode()
         {
             //Splat.Locator.CurrentMutable.Register(() => new AxisRangeToButtonsView(), typeof(IViewFor<AxisRangeToButtonsNode>));
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<AxisRangeToButtonsNode>));
+            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<DynamicAxisToButtonNode>));
         }
 
-        public AxisRangeToButtonsNode()
+        public DynamicAxisToButtonNode()
         {
             Name = "Axis Range\nTo Buttons\n(Broken)";
 
@@ -34,8 +34,8 @@ namespace UcrPoc.ViewModels.Nodes
             };
             Inputs.Add(input);
 
-            var buttonInput = new ButtonInputViewModel(OnAddOutput) { Name = "AddOutput", ButtonLabel = "Add Output" };
-            Inputs.Add(buttonInput);
+            //var buttonInput = new ButtonInputViewModel(OnAddOutput) { Name = "AddOutput", ButtonLabel = "Add Output" };
+            //Inputs.Add(buttonInput);
         }
 
         private void OnAddOutput(bool state)

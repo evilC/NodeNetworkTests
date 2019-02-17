@@ -157,7 +157,7 @@
     <Compile Include="ViewModels\Nodes\DynamicButtonToAxisNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\AxisInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\AxisOutputNode.cs" />
-    <Compile Include="ViewModels\Nodes\AxisRangeToButtonsNode.cs" />
+    <Compile Include="ViewModels\Nodes\DynamicAxisToButtonNode.cs" />
     <Compile Include="ViewModels\Nodes\AxisToButtonsNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\ButtonInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\ButtonOutputNode.cs" />
