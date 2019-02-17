@@ -9,6 +9,7 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
+using UcrPoc.ViewModels.Editors;
 using UcrPoc.ViewModels.Ports;
 using UcrPoc.Views.Nodes;
 
@@ -55,9 +56,23 @@ namespace UcrPoc.ViewModels.Nodes
 
         public void AddInput()
         {
-            var vm = new ValueNodeInputViewModel<bool?> {Name = $"Input {_inputs.Count + 1}", Port = new ButtonPortViewModel()};
+            var inputNum = _inputs.Count;
+            var vm = new ValueNodeInputViewModel<bool?>
+            {
+                Name = $"Input {inputNum + 1}",
+                Port = new ButtonPortViewModel(),
+                Editor = new ButtonToAxisRangeEditorViewModel(),
+                HideEditorIfConnected = false
+            };
             _inputs.Add(vm);
             Inputs.Add(vm);
+            vm.ValueChanged.Subscribe(newValue =>
+            {
+                if (Inputs.Count < inputNum) return;
+                var sp = ((ButtonToAxisRangeEditorViewModel)(Inputs[inputNum].Editor)).AxisSetPoint;
+                Console.WriteLine($@"Input {inputNum + 1} changed to: {newValue} - Setpoint: {sp}");
+                _output.OnNext(sp);
+            });
         }
     }
 }
