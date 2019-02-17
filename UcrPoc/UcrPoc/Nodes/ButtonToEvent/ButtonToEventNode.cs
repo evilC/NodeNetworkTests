@@ -4,7 +4,7 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
-using UcrPoc.ViewModels.Ports;
+using UcrPoc.Ports.Button;
 
 namespace UcrPoc.Nodes.ButtonToEvent
 {

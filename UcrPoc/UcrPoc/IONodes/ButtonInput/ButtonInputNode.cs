@@ -3,7 +3,7 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
-using UcrPoc.ViewModels.Ports;
+using UcrPoc.Ports.Button;
 using UcrPoc.Widgets.TestButton;
 
 namespace UcrPoc.IONodes.ButtonInput

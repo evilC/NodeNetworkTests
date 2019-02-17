@@ -3,7 +3,7 @@ using System.Reactive.Subjects;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using ReactiveUI;
-using UcrPoc.ViewModels.Ports;
+using UcrPoc.Ports.Axis;
 using DeadzoneView = UcrPoc.Nodes.Deadzone.DeadzoneView;
 
 namespace UcrPoc.ViewModels.Nodes

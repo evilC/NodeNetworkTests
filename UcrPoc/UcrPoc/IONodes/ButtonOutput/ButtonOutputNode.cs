@@ -2,7 +2,7 @@
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using ReactiveUI;
-using UcrPoc.ViewModels.Ports;
+using UcrPoc.Ports.Button;
 
 namespace UcrPoc.IONodes.ButtonOutput
 {

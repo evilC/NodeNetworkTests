@@ -1,6 +1,5 @@
 ﻿using NodeNetwork.ViewModels;
 using ReactiveUI;
-using UcrPoc.Views.Ports;
 
 namespace UcrPoc.Ports.Button
 {

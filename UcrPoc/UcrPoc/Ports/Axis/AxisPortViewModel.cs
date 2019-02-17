@@ -1,8 +1,7 @@
 ﻿using NodeNetwork.ViewModels;
 using ReactiveUI;
-using UcrPoc.Views.Ports;
 
-namespace UcrPoc.ViewModels.Ports
+namespace UcrPoc.Ports.Axis
 {
     public class AxisPortViewModel : PortViewModel
     {
