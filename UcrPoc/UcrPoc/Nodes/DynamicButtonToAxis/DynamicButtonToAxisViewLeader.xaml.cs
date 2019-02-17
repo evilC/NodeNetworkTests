@@ -13,9 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReactiveUI;
-using UcrPoc.ViewModels.Nodes;
 
-namespace UcrPoc.Views.Nodes
+namespace UcrPoc.Nodes.DynamicButtonToAxis
 {
     /// <summary>
     /// Interaction logic for DynamicButtonToAxisViewLeader.xaml

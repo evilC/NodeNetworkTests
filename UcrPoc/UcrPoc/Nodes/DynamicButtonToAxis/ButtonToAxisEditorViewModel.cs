@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
-using NodeNetwork.Toolkit.ValueNode;
+﻿using NodeNetwork.Toolkit.ValueNode;
 using ReactiveUI;
 using UcrPoc.Views.Editors;
 
-namespace UcrPoc.ViewModels.Editors
+namespace UcrPoc.Nodes.DynamicButtonToAxis
 {
     public class ButtonToAxisEditorViewModel : ValueEditorViewModel<bool?>
     {

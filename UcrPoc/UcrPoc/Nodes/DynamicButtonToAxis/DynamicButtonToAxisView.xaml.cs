@@ -14,11 +14,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReactiveUI;
+using UcrPoc.Nodes.DynamicButtonToAxis;
 using UcrPoc.ViewModels.Editors;
 using UcrPoc.ViewModels.Nodes;
 using UcrPoc.Views.Editors;
 
-namespace UcrPoc.Views.Nodes
+namespace UcrPoc.Nodes.DynamicButtonToAxis
 {
     /// <summary>
     /// Interaction logic for DynamicButtonToAxisView.xaml
