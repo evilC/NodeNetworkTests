@@ -9,6 +9,7 @@ using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
 using UcrPoc.ViewModels.Ports;
+using UcrPoc.Views.Nodes;
 
 namespace UcrPoc.ViewModels.Nodes
 {
@@ -16,11 +17,13 @@ namespace UcrPoc.ViewModels.Nodes
     {
         private List<Subject<bool?>> _outputs = new List<Subject<bool?>>();
         private readonly List<ValueNodeOutputViewModel<bool?>> _resultOutputs = new List<ValueNodeOutputViewModel<bool?>>();
+        public bool? AddOutputButtonState { get => _addOutputButtonState.Value; set => _addOutputButtonState.OnNext(value); }
+        private readonly BehaviorSubject<bool?> _addOutputButtonState = new BehaviorSubject<bool?>(false);
 
         static DynamicAxisToButtonNode()
         {
             //Splat.Locator.CurrentMutable.Register(() => new AxisRangeToButtonsView(), typeof(IViewFor<AxisRangeToButtonsNode>));
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<DynamicAxisToButtonNode>));
+            Splat.Locator.CurrentMutable.Register(() => new DynamicAxisToButtonView(), typeof(IViewFor<DynamicAxisToButtonNode>));
         }
 
         public DynamicAxisToButtonNode()
@@ -34,13 +37,12 @@ namespace UcrPoc.ViewModels.Nodes
             };
             Inputs.Add(input);
 
-            //var buttonInput = new ButtonInputViewModel(OnAddOutput) { Name = "AddOutput", ButtonLabel = "Add Output" };
-            //Inputs.Add(buttonInput);
+            _addOutputButtonState.Subscribe(OnAddOutput);
         }
 
-        private void OnAddOutput(bool state)
+        private void OnAddOutput(bool? state)
         {
-            if (!state) return;
+            if (state == null || (bool) !state) return;
             AddOutput();
         }
 

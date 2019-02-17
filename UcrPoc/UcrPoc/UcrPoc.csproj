@@ -177,6 +177,12 @@
     <Compile Include="Views\Nodes\DeadzoneView.xaml.cs">
       <DependentUpon>DeadzoneView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Nodes\DynamicAxisToButtonView.xaml.cs">
+      <DependentUpon>DynamicAxisToButtonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nodes\DynamicAxisToButtonViewLeader.xaml.cs">
+      <DependentUpon>DynamicAxisToButtonViewLeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Nodes\DynamicButtonToAxisView.xaml.cs">
       <DependentUpon>DynamicButtonToAxisView.xaml</DependentUpon>
     </Compile>
@@ -229,6 +235,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Nodes\DeadzoneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Nodes\DynamicAxisToButtonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Nodes\DynamicAxisToButtonViewLeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
