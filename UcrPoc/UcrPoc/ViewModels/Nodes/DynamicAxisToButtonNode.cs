@@ -22,7 +22,6 @@ namespace UcrPoc.ViewModels.Nodes
 
         static DynamicAxisToButtonNode()
         {
-            //Splat.Locator.CurrentMutable.Register(() => new AxisRangeToButtonsView(), typeof(IViewFor<AxisRangeToButtonsNode>));
             Splat.Locator.CurrentMutable.Register(() => new DynamicAxisToButtonView(), typeof(IViewFor<DynamicAxisToButtonNode>));
         }
 
