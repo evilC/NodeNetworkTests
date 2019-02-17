@@ -46,7 +46,8 @@ namespace UcrPoc.Views.Editors
 
             this.WhenActivated(d =>
             {
-                //this.Bind(ViewModel, vm => vm.AxisSetPoint, v => v.AxisSetPoint.Text).DisposeWith(d);
+                this.Bind(ViewModel, vm => vm.AxisFrom, v => v.AxisFrom.Text).DisposeWith(d);
+                this.Bind(ViewModel, vm => vm.AxisTo, v => v.AxisTo.Text).DisposeWith(d);
             });
         }
     }

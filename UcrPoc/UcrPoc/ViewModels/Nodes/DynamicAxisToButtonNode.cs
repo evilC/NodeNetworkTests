@@ -36,6 +36,10 @@ namespace UcrPoc.ViewModels.Nodes
                 Port = new AxisPortViewModel()
             };
             Inputs.Add(input);
+            input.ValueChanged.Subscribe(newValue =>
+            {
+                Console.WriteLine($@"Input changed to: {newValue}");
+            });
 
             _addOutputButtonState.Subscribe(OnAddOutput);
         }

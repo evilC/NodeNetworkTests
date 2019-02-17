@@ -11,6 +11,9 @@ namespace UcrPoc.ViewModels.Editors
 {
     public class AxisToButtonEditorViewModel : ValueEditorViewModel<bool?>
     {
+        public short? AxisFrom { get; set; } = 0;
+        public short? AxisTo { get; set; } = 0;
+
         static AxisToButtonEditorViewModel()
         {
             Splat.Locator.CurrentMutable.Register(() => new AxisToButtonEditorView(), typeof(IViewFor<AxisToButtonEditorViewModel>));
