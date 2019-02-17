@@ -144,7 +144,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\EventObj.cs" />
-    <Compile Include="ViewModels\Editors\ButtonToAxisRangeEditorViewModel.cs" />
+    <Compile Include="ViewModels\Editors\AxisToButtonEditorViewModel.cs" />
+    <Compile Include="ViewModels\Editors\ButtonToAxisEditorViewModel.cs" />
     <Compile Include="ViewModels\Editors\FloatEditorViewModel.cs" />
     <Compile Include="ViewModels\Nodes\AxisInverterNode.cs" />
     <Compile Include="ViewModels\Nodes\DeadzoneNode.cs" />
@@ -165,6 +166,9 @@
     <Compile Include="ViewModels\Nodes\IO\EventInputNode.cs" />
     <Compile Include="ViewModels\Nodes\IO\EventOutputNode.cs" />
     <Compile Include="ViewModels\Nodes\EventToButtonNode.cs" />
+    <Compile Include="Views\Editors\AxisToButtonEditorView.xaml.cs">
+      <DependentUpon>AxisToButtonEditorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Editors\ButtonToAxisEditorView.xaml.cs">
       <DependentUpon>ButtonToAxisEditorView.xaml</DependentUpon>
     </Compile>
@@ -222,6 +226,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Editors\AxisToButtonEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Editors\ButtonToAxisEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

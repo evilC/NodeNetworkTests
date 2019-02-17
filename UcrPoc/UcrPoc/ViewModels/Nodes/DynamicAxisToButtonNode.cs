@@ -8,6 +8,7 @@ using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
+using UcrPoc.ViewModels.Editors;
 using UcrPoc.ViewModels.Ports;
 using UcrPoc.Views.Nodes;
 
@@ -27,7 +28,7 @@ namespace UcrPoc.ViewModels.Nodes
 
         public DynamicAxisToButtonNode()
         {
-            Name = "Axis Range\nTo Buttons\n(Broken)";
+            Name = "Dynamic Axis To Button";
 
             var input = new ValueNodeInputViewModel<short?>
             {
@@ -48,7 +49,13 @@ namespace UcrPoc.ViewModels.Nodes
         public void AddOutput()
         {
             var i = _resultOutputs.Count;
-            _resultOutputs.Add(new ValueNodeOutputViewModel<bool?> { Name = $"Output {i + 1}" });
+            //_resultOutputs.Add(new ValueNodeOutputViewModel<bool?> { Name = $"Output {i + 1}" });
+            _resultOutputs.Add(new ValueNodeOutputViewModel<bool?>
+            {
+                Name = $"Output {i + 1}",
+                Port = new ButtonPortViewModel(),
+                Editor = new AxisToButtonEditorViewModel()
+            });
             Outputs.Add(_resultOutputs[i]);
 
             var ov = new Subject<bool?>();

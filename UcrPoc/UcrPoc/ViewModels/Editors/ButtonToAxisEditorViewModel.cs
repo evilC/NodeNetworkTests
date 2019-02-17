@@ -10,16 +10,16 @@ using UcrPoc.Views.Editors;
 
 namespace UcrPoc.ViewModels.Editors
 {
-    public class ButtonToAxisRangeEditorViewModel : ValueEditorViewModel<bool?>
+    public class ButtonToAxisEditorViewModel : ValueEditorViewModel<bool?>
     {
         public short? AxisSetPoint { get; set; } = 0;
 
-        static ButtonToAxisRangeEditorViewModel()
+        static ButtonToAxisEditorViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new ButtonToAxisEditorView(), typeof(IViewFor<ButtonToAxisRangeEditorViewModel>));
+            Splat.Locator.CurrentMutable.Register(() => new ButtonToAxisEditorView(), typeof(IViewFor<ButtonToAxisEditorViewModel>));
         }
 
-        public ButtonToAxisRangeEditorViewModel()
+        public ButtonToAxisEditorViewModel()
         {
             Value = false;
         }

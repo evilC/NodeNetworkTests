@@ -64,7 +64,7 @@ namespace UcrPoc.ViewModels.Nodes
             {
                 Name = $"Input {inputNum + 1}",
                 Port = new ButtonPortViewModel(),
-                Editor = new ButtonToAxisRangeEditorViewModel(),
+                Editor = new ButtonToAxisEditorViewModel(),
                 HideEditorIfConnected = false
             };
             _inputs.Add(vm);
@@ -75,7 +75,7 @@ namespace UcrPoc.ViewModels.Nodes
                 var value = (bool) newValue;
                 if (value)
                 {
-                    var sp = ((ButtonToAxisRangeEditorViewModel)(Inputs[inputNum].Editor)).AxisSetPoint;
+                    var sp = ((ButtonToAxisEditorViewModel)(Inputs[inputNum].Editor)).AxisSetPoint;
                     _output.OnNext(sp);
                 }
                 else if (DefaultSetPointValue != null)
