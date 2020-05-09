@@ -22,15 +22,6 @@ namespace ControlFreak.Gui.ViewModels
         public NodeListViewModel ListViewModel { get; } = new NodeListViewModel();
         public NetworkViewModel NetworkViewModel { get; } = new NetworkViewModel();
 
-        #region ValueLabel
-        private string _valueLabel;
-        public string ValueLabel
-        {
-            get => _valueLabel;
-            set => this.RaiseAndSetIfChanged(ref _valueLabel, value);
-        }
-        #endregion
-
         public MainViewModel()
         {
             ListViewModel.AddNodeType(() => new AxisSummerViewModel());
