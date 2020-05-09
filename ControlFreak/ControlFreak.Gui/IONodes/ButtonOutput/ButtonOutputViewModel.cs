@@ -1,5 +1,6 @@
 ﻿using System;
 using ControlFreak.Gui.IONodes.AxisOutput;
+using ControlFreak.Gui.Ports.Button;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
@@ -30,6 +31,7 @@ namespace ControlFreak.Gui.IONodes.ButtonOutput
             Input = new ValueNodeInputViewModel<bool?>
             {
                 Name = "Input",
+                Port = new ButtonPortViewModel(),
             };
 
             Inputs.Add(Input);
