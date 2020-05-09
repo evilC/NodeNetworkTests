@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Reactive.Linq;
 using System.Windows;
 using ControlFreak.Gui.IONodes.AxisInput;
 using ControlFreak.Gui.IONodes.AxisOutput;
@@ -13,19 +12,19 @@ using NodeNetwork.Toolkit.NodeList;
 using NodeNetwork.ViewModels;
 using ReactiveUI;
 
-namespace ControlFreak.Gui.ViewModels
+namespace ControlFreak.Gui
 {
-    public class MainViewModel : ReactiveObject
+    public class MainWindowViewModel : ReactiveObject
     {
-        static MainViewModel()
+        static MainWindowViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new MainWindow(), typeof(IViewFor<MainViewModel>));
+            Splat.Locator.CurrentMutable.Register(() => new MainWindowView(), typeof(IViewFor<MainWindowViewModel>));
         }
 
         public NodeListViewModel ListViewModel { get; } = new NodeListViewModel();
         public NetworkViewModel NetworkViewModel { get; } = new NetworkViewModel();
 
-        public MainViewModel()
+        public MainWindowViewModel()
         {
             // IONodes
             ListViewModel.AddNodeType(() => new AxisInputViewModel());

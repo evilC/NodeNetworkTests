@@ -12,30 +12,30 @@ namespace ControlFreak.Gui
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, IViewFor<MainViewModel>
+    public partial class MainWindowView : Window, IViewFor<MainWindowViewModel>
     {
         #region ViewModel
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
-            typeof(MainViewModel), typeof(MainWindow), new PropertyMetadata(null));
+            typeof(MainWindowViewModel), typeof(MainWindowView), new PropertyMetadata(null));
 
-        public MainViewModel ViewModel
+        public MainWindowViewModel ViewModel
         {
-            get => (MainViewModel)GetValue(ViewModelProperty);
+            get => (MainWindowViewModel)GetValue(ViewModelProperty);
             set => SetValue(ViewModelProperty, value);
         }
 
         object IViewFor.ViewModel
         {
             get => ViewModel;
-            set => ViewModel = (MainViewModel)value;
+            set => ViewModel = (MainWindowViewModel)value;
         }
         #endregion
 
-        public MainWindow()
+        public MainWindowView()
         {
             InitializeComponent();
 
-            this.ViewModel = new MainViewModel();
+            this.ViewModel = new MainWindowViewModel();
 
             this.WhenActivated(d =>
             {
