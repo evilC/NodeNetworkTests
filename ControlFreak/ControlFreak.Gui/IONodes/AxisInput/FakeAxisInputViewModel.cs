@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ControlFreak.Gui.ViewModels;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
 
-namespace ControlFreak.Gui.ViewModels.Plugins
+namespace ControlFreak.Gui.IONodes.AxisInput
 {
     public class FakeAxisInputViewModel : NodeViewModel
     {

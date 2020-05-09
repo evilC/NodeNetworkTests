@@ -146,8 +146,8 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Plugins\AxisSummerViewModel.cs" />
     <Compile Include="ViewModels\IntegerValueEditorViewModel.cs" />
-    <Compile Include="ViewModels\Plugins\FakeAxisInputViewModel.cs" />
-    <Compile Include="ViewModels\Plugins\FakeButtonInputViewModel.cs" />
+    <Compile Include="IONodes\AxisInput\FakeAxisInputViewModel.cs" />
+    <Compile Include="IONodes\ButtonInput\FakeButtonInputViewModel.cs" />
     <Compile Include="Views\BoolValueEditorView.xaml.cs">
       <DependentUpon>BoolValueEditorView.xaml</DependentUpon>
     </Compile>

@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using System.Reactive.Linq;
 using System.Windows;
+using ControlFreak.Gui.IONodes.AxisInput;
 using ControlFreak.Gui.IONodes.AxisOutput;
+using ControlFreak.Gui.IONodes.ButtonInput;
 using ControlFreak.Gui.IONodes.ButtonOutput;
 using ControlFreak.Gui.ViewModels.Plugins;
 using DynamicData;
