@@ -5,6 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
-             d:DesignHeight="20" d:DesignWidth="100">
+             d:DesignHeight="20" Width="100">
        <xctk:IntegerUpDown Name="valueUpDown"/>
 </UserControl>
