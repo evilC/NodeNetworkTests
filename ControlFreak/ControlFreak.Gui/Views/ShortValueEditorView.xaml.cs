@@ -17,26 +17,26 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.Views
 {
-    public partial class IntegerValueEditorView : UserControl, IViewFor<IntegerValueEditorViewModel>
+    public partial class ShortValueEditorView : UserControl, IViewFor<ShortValueEditorViewModel>
     {
         #region ViewModel
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
-            typeof(IntegerValueEditorViewModel), typeof(IntegerValueEditorView), new PropertyMetadata(null));
+            typeof(ShortValueEditorViewModel), typeof(ShortValueEditorView), new PropertyMetadata(null));
 
-        public IntegerValueEditorViewModel ViewModel
+        public ShortValueEditorViewModel ViewModel
         {
-            get => (IntegerValueEditorViewModel)GetValue(ViewModelProperty);
+            get => (ShortValueEditorViewModel)GetValue(ViewModelProperty);
             set => SetValue(ViewModelProperty, value);
         }
 
         object IViewFor.ViewModel
         {
             get => ViewModel;
-            set => ViewModel = (IntegerValueEditorViewModel)value;
+            set => ViewModel = (ShortValueEditorViewModel)value;
         }
         #endregion
 
-        public IntegerValueEditorView()
+        public ShortValueEditorView()
         {
             InitializeComponent();
 

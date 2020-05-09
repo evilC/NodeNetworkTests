@@ -9,14 +9,14 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.ViewModels
 {
-    public class IntegerValueEditorViewModel : ValueEditorViewModel<int?>
+    public class ShortValueEditorViewModel : ValueEditorViewModel<short?>
     {
-        static IntegerValueEditorViewModel()
+        static ShortValueEditorViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new IntegerValueEditorView(), typeof(IViewFor<IntegerValueEditorViewModel>));
+            Splat.Locator.CurrentMutable.Register(() => new ShortValueEditorView(), typeof(IViewFor<ShortValueEditorViewModel>));
         }
 
-        public IntegerValueEditorViewModel()
+        public ShortValueEditorViewModel()
         {
             Value = 0;
         }

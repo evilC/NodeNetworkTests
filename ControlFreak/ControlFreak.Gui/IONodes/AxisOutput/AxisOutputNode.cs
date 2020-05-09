@@ -10,7 +10,7 @@ namespace ControlFreak.Gui.IONodes.AxisOutput
     public class AxisOutputNode : NodeViewModel
     {
         private string _labelContent;
-        public ValueNodeInputViewModel<int?> Input { get; }
+        public ValueNodeInputViewModel<short?> Input { get; }
 
         public string LabelContent
         {
@@ -27,7 +27,7 @@ namespace ControlFreak.Gui.IONodes.AxisOutput
         {
             Name = "Axis Output";
 
-            Input = new ValueNodeInputViewModel<int?>
+            Input = new ValueNodeInputViewModel<short?>
             {
                 Name = "Input",
             };

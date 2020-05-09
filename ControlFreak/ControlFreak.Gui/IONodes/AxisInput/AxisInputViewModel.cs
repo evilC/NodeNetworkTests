@@ -14,15 +14,15 @@ namespace ControlFreak.Gui.IONodes.AxisInput
             Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<AxisInputViewModel>));
         }
 
-        public IntegerValueEditorViewModel ValueEditor { get; } = new IntegerValueEditorViewModel();
+        public ShortValueEditorViewModel ValueEditor { get; } = new ShortValueEditorViewModel();
 
-        public ValueNodeOutputViewModel<int?> Output { get; }
+        public ValueNodeOutputViewModel<short?> Output { get; }
 
         public AxisInputViewModel()
         {
             this.Name = "Axis Input";
 
-            Output = new ValueNodeOutputViewModel<int?>
+            Output = new ValueNodeOutputViewModel<short?>
             {
                 Name = "Value",
                 Editor = ValueEditor,

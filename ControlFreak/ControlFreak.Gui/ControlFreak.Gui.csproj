@@ -145,14 +145,14 @@
     <Compile Include="ViewModels\BoolValueEditorViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Plugins\AxisSummerViewModel.cs" />
-    <Compile Include="ViewModels\IntegerValueEditorViewModel.cs" />
+    <Compile Include="ViewModels\ShortValueEditorViewModel.cs" />
     <Compile Include="IONodes\AxisInput\AxisInputViewModel.cs" />
     <Compile Include="IONodes\ButtonInput\ButtonInputViewModel.cs" />
     <Compile Include="Views\BoolValueEditorView.xaml.cs">
       <DependentUpon>BoolValueEditorView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\IntegerValueEditorView.xaml.cs">
-      <DependentUpon>IntegerValueEditorView.xaml</DependentUpon>
+    <Compile Include="Views\ShortValueEditorView.xaml.cs">
+      <DependentUpon>ShortValueEditorView.xaml</DependentUpon>
     </Compile>
     <Page Include="IONodes\AxisOutput\AxisOutputView.xaml">
       <SubType>Designer</SubType>
@@ -178,7 +178,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\IntegerValueEditorView.xaml">
+    <Page Include="Views\ShortValueEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
