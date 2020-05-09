@@ -17,12 +17,12 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.IONodes.AxisOutput
 {
-    public partial class AxisOutputView : IViewFor<AxisOutputNode>
+    public partial class AxisOutputView : IViewFor<AxisOutputViewModel>
     {
         public static readonly DependencyProperty ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
-            typeof(AxisOutputNode), typeof(AxisOutputView), new PropertyMetadata(null));
-        public AxisOutputNode ViewModel { get => (AxisOutputNode)GetValue(ViewModelProperty); set => SetValue(ViewModelProperty, value); }
-        object IViewFor.ViewModel { get => ViewModel; set => ViewModel = (AxisOutputNode)value; }
+            typeof(AxisOutputViewModel), typeof(AxisOutputView), new PropertyMetadata(null));
+        public AxisOutputViewModel ViewModel { get => (AxisOutputViewModel)GetValue(ViewModelProperty); set => SetValue(ViewModelProperty, value); }
+        object IViewFor.ViewModel { get => ViewModel; set => ViewModel = (AxisOutputViewModel)value; }
 
         public AxisOutputView()
         {

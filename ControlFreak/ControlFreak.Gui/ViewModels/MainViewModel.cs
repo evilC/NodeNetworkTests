@@ -29,7 +29,7 @@ namespace ControlFreak.Gui.ViewModels
         {
             // IONodes
             ListViewModel.AddNodeType(() => new AxisInputViewModel());
-            ListViewModel.AddNodeType(() => new AxisOutputNode());
+            ListViewModel.AddNodeType(() => new AxisOutputViewModel());
             ListViewModel.AddNodeType(() => new ButtonInputViewModel());
             ListViewModel.AddNodeType(() => new ButtonOutputNode());
 
@@ -51,7 +51,7 @@ namespace ControlFreak.Gui.ViewModels
             sum.Position = startingPoint;
             sum.Position = new Point(startingPoint.X + 250, startingPoint.Y + 50);
 
-            var axisOutput = new AxisOutputNode();
+            var axisOutput = new AxisOutputViewModel();
             NetworkViewModel.Nodes.Add(axisOutput);
             axisOutput.Position = new Point(startingPoint.X + 500, startingPoint.Y + 100);
 

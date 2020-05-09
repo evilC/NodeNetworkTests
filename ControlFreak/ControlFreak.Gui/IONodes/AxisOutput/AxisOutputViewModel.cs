@@ -7,7 +7,7 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.IONodes.AxisOutput
 {
-    public class AxisOutputNode : NodeViewModel
+    public class AxisOutputViewModel : NodeViewModel
     {
         private string _labelContent;
         public ValueNodeInputViewModel<short?> Input { get; }
@@ -18,12 +18,12 @@ namespace ControlFreak.Gui.IONodes.AxisOutput
             set => this.RaiseAndSetIfChanged(ref _labelContent, value);
         }
 
-        static AxisOutputNode()
+        static AxisOutputViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new AxisOutputView(), typeof(IViewFor<AxisOutputNode>));
+            Splat.Locator.CurrentMutable.Register(() => new AxisOutputView(), typeof(IViewFor<AxisOutputViewModel>));
         }
 
-        public AxisOutputNode()
+        public AxisOutputViewModel()
         {
             Name = "Axis Output";
 
