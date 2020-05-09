@@ -192,6 +192,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Plugins\ButtonsToAxis\ButtonsToAxisViewModel.cs" />
     <Compile Include="Ports\Axis\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
     </Compile>

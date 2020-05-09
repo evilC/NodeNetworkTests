@@ -5,6 +5,7 @@ using ControlFreak.Gui.IONodes.AxisOutput;
 using ControlFreak.Gui.IONodes.ButtonInput;
 using ControlFreak.Gui.IONodes.ButtonOutput;
 using ControlFreak.Gui.Plugins;
+using ControlFreak.Gui.Plugins.ButtonsToAxis;
 using DynamicData;
 using NodeNetwork;
 using NodeNetwork.Toolkit;
@@ -34,32 +35,33 @@ namespace ControlFreak.Gui
 
             // Plugins
             ListViewModel.AddNodeType(() => new AxisSummerViewModel());
+            ListViewModel.AddNodeType(() => new ButtonsToAxisViewModel());
 
             var startingPoint = new Point(100, 100);
 
-            var input1 = new AxisInputViewModel();
-            NetworkViewModel.Nodes.Add(input1);
-            input1.Position = startingPoint;
+            var inputButton1 = new ButtonInputViewModel();
+            NetworkViewModel.Nodes.Add(inputButton1);
+            inputButton1.Position = startingPoint;
 
-            var input2 = new AxisInputViewModel();
-            NetworkViewModel.Nodes.Add(input2);
-            input2.Position = new Point(startingPoint.X, startingPoint.Y + 150);
+            var inputButton2 = new ButtonInputViewModel();
+            NetworkViewModel.Nodes.Add(inputButton2);
+            inputButton2.Position = new Point(startingPoint.X, startingPoint.Y + 150);
 
-            var sum = new AxisSummerViewModel();
-            NetworkViewModel.Nodes.Add(sum);
-            sum.Position = startingPoint;
-            sum.Position = new Point(startingPoint.X + 250, startingPoint.Y + 50);
+            var bToA = new ButtonsToAxisViewModel();
+            NetworkViewModel.Nodes.Add(bToA);
+            bToA.Position = startingPoint;
+            bToA.Position = new Point(startingPoint.X + 250, startingPoint.Y + 50);
 
             var axisOutput = new AxisOutputViewModel();
             NetworkViewModel.Nodes.Add(axisOutput);
             axisOutput.Position = new Point(startingPoint.X + 500, startingPoint.Y + 100);
 
-            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(axisOutput.Input, sum.Output));
-            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(sum.Input1, input1.Output));
-            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(sum.Input2, input2.Output));
+            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(axisOutput.Input, bToA.Output));
+            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(bToA.InputLow, inputButton1.Output));
+            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(bToA.InputHigh, inputButton2.Output));
 
-            input1.ValueEditor.Value = 123;
-            input2.ValueEditor.Value = 456;
+            inputButton1.ValueEditor.Value = false;
+            inputButton2.ValueEditor.Value = false;
 
             NetworkViewModel.Validator = network =>
             {
