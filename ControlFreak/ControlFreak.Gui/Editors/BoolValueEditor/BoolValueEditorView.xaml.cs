@@ -1,9 +1,8 @@
 ﻿using System.Reactive.Disposables;
 using System.Windows;
-using ControlFreak.Gui.ViewModels;
 using ReactiveUI;
 
-namespace ControlFreak.Gui.Views
+namespace ControlFreak.Gui.Editors.BoolValueEditor
 {
     public partial class BoolValueEditorView : IViewFor<BoolValueEditorViewModel>
     {

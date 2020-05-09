@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ControlFreak.Gui.Views;
-using NodeNetwork.Toolkit.ValueNode;
+﻿using NodeNetwork.Toolkit.ValueNode;
 using ReactiveUI;
 
-namespace ControlFreak.Gui.ViewModels
+namespace ControlFreak.Gui.Editors.ShortValueEditor
 {
     public class ShortValueEditorViewModel : ValueEditorViewModel<short?>
     {

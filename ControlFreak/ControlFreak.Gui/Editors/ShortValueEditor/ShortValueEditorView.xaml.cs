@@ -1,9 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using ControlFreak.Gui.ViewModels;
 using ReactiveUI;
 
-namespace ControlFreak.Gui.Views
+namespace ControlFreak.Gui.Editors.ShortValueEditor
 {
     public partial class ShortValueEditorView : UserControl, IViewFor<ShortValueEditorViewModel>
     {

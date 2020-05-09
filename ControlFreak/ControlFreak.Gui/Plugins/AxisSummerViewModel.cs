@@ -1,5 +1,5 @@
 ﻿using System.Reactive.Linq;
-using ControlFreak.Gui.ViewModels;
+using ControlFreak.Gui.Editors.ShortValueEditor;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;

@@ -142,16 +142,16 @@
     <Compile Include="IONodes\ButtonOutput\ButtonOutputView.xaml.cs">
       <DependentUpon>ButtonOutputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\BoolValueEditorViewModel.cs" />
+    <Compile Include="Editors\BoolValueEditor\BoolValueEditorViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Plugins\AxisSummerViewModel.cs" />
-    <Compile Include="ViewModels\ShortValueEditorViewModel.cs" />
+    <Compile Include="Editors\ShortValueEditor\ShortValueEditorViewModel.cs" />
     <Compile Include="IONodes\AxisInput\AxisInputViewModel.cs" />
     <Compile Include="IONodes\ButtonInput\ButtonInputViewModel.cs" />
-    <Compile Include="Views\BoolValueEditorView.xaml.cs">
+    <Compile Include="Editors\BoolValueEditor\BoolValueEditorView.xaml.cs">
       <DependentUpon>BoolValueEditorView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ShortValueEditorView.xaml.cs">
+    <Compile Include="Editors\ShortValueEditor\ShortValueEditorView.xaml.cs">
       <DependentUpon>ShortValueEditorView.xaml</DependentUpon>
     </Compile>
     <Page Include="IONodes\AxisOutput\AxisOutputView.xaml">
@@ -174,11 +174,11 @@
       <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\BoolValueEditorView.xaml">
+    <Page Include="Editors\BoolValueEditor\BoolValueEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ShortValueEditorView.xaml">
+    <Page Include="Editors\ShortValueEditor\ShortValueEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

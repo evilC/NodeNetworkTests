@@ -1,8 +1,7 @@
-﻿using ControlFreak.Gui.Views;
-using NodeNetwork.Toolkit.ValueNode;
+﻿using NodeNetwork.Toolkit.ValueNode;
 using ReactiveUI;
 
-namespace ControlFreak.Gui.ViewModels
+namespace ControlFreak.Gui.Editors.BoolValueEditor
 {
     public class BoolValueEditorViewModel : ValueEditorViewModel<bool?>
     {

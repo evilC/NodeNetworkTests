@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ControlFreak.Gui.Views.ShortValueEditorView"
+﻿<UserControl x:Class="ControlFreak.Gui.Editors.ShortValueEditor.ShortValueEditorView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 

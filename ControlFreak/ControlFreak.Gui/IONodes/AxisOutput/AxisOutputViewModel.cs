@@ -1,5 +1,4 @@
 ﻿using System;
-using ControlFreak.Gui.ViewModels;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;

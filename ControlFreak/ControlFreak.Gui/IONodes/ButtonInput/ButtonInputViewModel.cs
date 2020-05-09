@@ -1,4 +1,4 @@
-﻿using ControlFreak.Gui.ViewModels;
+﻿using ControlFreak.Gui.Editors.BoolValueEditor;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
