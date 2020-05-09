@@ -138,7 +138,7 @@
     <Compile Include="ViewModels\Plugins\AxisSummerViewModel.cs" />
     <Compile Include="ViewModels\IntegerValueEditorViewModel.cs" />
     <Compile Include="ViewModels\Plugins\FakeAxisInputViewModel.cs" />
-    <Compile Include="ViewModels\Plugins\OutputNodeViewModel.cs" />
+    <Compile Include="ViewModels\Plugins\AxisOutputNodeViewModel.cs" />
     <Compile Include="Views\IntegerValueEditorView.xaml.cs">
       <DependentUpon>IntegerValueEditorView.xaml</DependentUpon>
     </Compile>

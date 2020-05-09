@@ -6,18 +6,18 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.ViewModels.Plugins
 {
-    public class OutputNodeViewModel : NodeViewModel
+    public class AxisOutputNodeViewModel : NodeViewModel
     {
-        static OutputNodeViewModel()
+        static AxisOutputNodeViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<OutputNodeViewModel>));
+            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<AxisOutputNodeViewModel>));
         }
 
         public ValueNodeInputViewModel<int?> ResultInput { get; }
 
-        public OutputNodeViewModel()
+        public AxisOutputNodeViewModel()
         {
-            Name = "Output";
+            Name = "Axis Output";
 
             CanBeRemovedByUser = false;
 
