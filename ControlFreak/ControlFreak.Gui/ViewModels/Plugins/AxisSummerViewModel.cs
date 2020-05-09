@@ -7,13 +7,13 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.ViewModels.Plugins
 {
-    public class AxisSummer : NodeViewModel
+    public class AxisSummerViewModel : NodeViewModel
     {
         public ValueNodeInputViewModel<int?> Input1 { get; }
         public ValueNodeInputViewModel<int?> Input2 { get; }
         public ValueNodeOutputViewModel<int?> Output { get; }
 
-        public AxisSummer()
+        public AxisSummerViewModel()
         {
             Name = "Axis Summer";
 
@@ -42,9 +42,9 @@ namespace ControlFreak.Gui.ViewModels.Plugins
             Outputs.Add(Output);
         }
 
-        static AxisSummer()
+        static AxisSummerViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<AxisSummer>));
+            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<AxisSummerViewModel>));
         }
     }
 }

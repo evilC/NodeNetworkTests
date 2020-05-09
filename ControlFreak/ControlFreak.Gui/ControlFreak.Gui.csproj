@@ -134,7 +134,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\Plugins\AxisSummer.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Plugins\AxisSummerViewModel.cs" />
     <Compile Include="ViewModels\IntegerValueEditorViewModel.cs" />
     <Compile Include="Views\IntegerValueEditorView.xaml.cs">
       <DependentUpon>IntegerValueEditorView.xaml</DependentUpon>
