@@ -29,14 +29,13 @@ namespace ControlFreak.Gui.IONodes.AxisOutput
 
             Input = new ValueNodeInputViewModel<int?>
             {
-                Name = "Input 1",
+                Name = "Input",
             };
 
             Inputs.Add(Input);
             Input.ValueChanged.Subscribe(newValue =>
             {
-                if (newValue == null) return;
-                LabelContent = newValue.ToString();
+                LabelContent = newValue == null ? "None" : newValue.ToString();
             });
         }
     }

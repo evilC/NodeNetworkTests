@@ -31,13 +31,11 @@ namespace ControlFreak.Gui.ViewModels
             var startingPoint = new Point(100, 100);
 
             var input1 = new FakeAxisInputViewModel();
-            input1.ValueEditor.Value = 123;
             NetworkViewModel.Nodes.Add(input1);
             input1.Position = startingPoint;
 
             var input2 = new FakeAxisInputViewModel();
             NetworkViewModel.Nodes.Add(input2);
-            input2.ValueEditor.Value = 456;
             input2.Position = new Point(startingPoint.X, startingPoint.Y + 150);
 
             var sum = new AxisSummerViewModel();
@@ -49,9 +47,12 @@ namespace ControlFreak.Gui.ViewModels
             NetworkViewModel.Nodes.Add(axisOutput);
             axisOutput.Position = new Point(startingPoint.X + 500, startingPoint.Y + 100);
 
+            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(axisOutput.Input, sum.Output));
             NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(sum.Input1, input1.Output));
             NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(sum.Input2, input2.Output));
-            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(axisOutput.Input, sum.Output));
+
+            input1.ValueEditor.Value = 123;
+            input2.ValueEditor.Value = 456;
 
             NetworkViewModel.Validator = network =>
             {
