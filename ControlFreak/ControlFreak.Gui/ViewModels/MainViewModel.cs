@@ -27,19 +27,22 @@ namespace ControlFreak.Gui.ViewModels
 
         public MainViewModel()
         {
-            ListViewModel.AddNodeType(() => new AxisSummerViewModel());
-            ListViewModel.AddNodeType(() => new FakeAxisInputViewModel());
-            ListViewModel.AddNodeType(() => new FakeButtonInputViewModel());
+            // IONodes
+            ListViewModel.AddNodeType(() => new AxisInputViewModel());
             ListViewModel.AddNodeType(() => new AxisOutputNode());
+            ListViewModel.AddNodeType(() => new ButtonInputViewModel());
             ListViewModel.AddNodeType(() => new ButtonOutputNode());
+
+            // Plugins
+            ListViewModel.AddNodeType(() => new AxisSummerViewModel());
 
             var startingPoint = new Point(100, 100);
 
-            var input1 = new FakeAxisInputViewModel();
+            var input1 = new AxisInputViewModel();
             NetworkViewModel.Nodes.Add(input1);
             input1.Position = startingPoint;
 
-            var input2 = new FakeAxisInputViewModel();
+            var input2 = new AxisInputViewModel();
             NetworkViewModel.Nodes.Add(input2);
             input2.Position = new Point(startingPoint.X, startingPoint.Y + 150);
 

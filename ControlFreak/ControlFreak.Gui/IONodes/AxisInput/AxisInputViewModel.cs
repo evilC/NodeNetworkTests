@@ -7,20 +7,20 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.IONodes.AxisInput
 {
-    public class FakeAxisInputViewModel : NodeViewModel
+    public class AxisInputViewModel : NodeViewModel
     {
-        static FakeAxisInputViewModel()
+        static AxisInputViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<FakeAxisInputViewModel>));
+            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<AxisInputViewModel>));
         }
 
         public IntegerValueEditorViewModel ValueEditor { get; } = new IntegerValueEditorViewModel();
 
         public ValueNodeOutputViewModel<int?> Output { get; }
 
-        public FakeAxisInputViewModel()
+        public AxisInputViewModel()
         {
-            this.Name = "Fake Axis Input";
+            this.Name = "Axis Input";
 
             Output = new ValueNodeOutputViewModel<int?>
             {

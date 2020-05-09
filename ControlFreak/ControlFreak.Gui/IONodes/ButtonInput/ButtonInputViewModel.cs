@@ -7,20 +7,20 @@ using ReactiveUI;
 
 namespace ControlFreak.Gui.IONodes.ButtonInput
 {
-    public class FakeButtonInputViewModel : NodeViewModel
+    public class ButtonInputViewModel : NodeViewModel
     {
-        static FakeButtonInputViewModel()
+        static ButtonInputViewModel()
         {
-            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<FakeButtonInputViewModel>));
+            Splat.Locator.CurrentMutable.Register(() => new NodeView(), typeof(IViewFor<ButtonInputViewModel>));
         }
 
         public BoolValueEditorViewModel ValueEditor { get; } = new BoolValueEditorViewModel();
 
         public ValueNodeOutputViewModel<bool?> Output { get; }
 
-        public FakeButtonInputViewModel()
+        public ButtonInputViewModel()
         {
-            this.Name = "Fake Button Input";
+            this.Name = "Button Input";
 
             Output = new ValueNodeOutputViewModel<bool?>
             {
