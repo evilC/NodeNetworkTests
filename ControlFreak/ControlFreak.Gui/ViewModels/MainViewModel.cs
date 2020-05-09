@@ -2,6 +2,7 @@
 using System.Reactive.Linq;
 using System.Windows;
 using ControlFreak.Gui.IONodes.AxisOutput;
+using ControlFreak.Gui.IONodes.ButtonOutput;
 using ControlFreak.Gui.ViewModels.Plugins;
 using DynamicData;
 using NodeNetwork;
@@ -27,6 +28,7 @@ namespace ControlFreak.Gui.ViewModels
             ListViewModel.AddNodeType(() => new AxisSummerViewModel());
             ListViewModel.AddNodeType(() => new FakeAxisInputViewModel());
             ListViewModel.AddNodeType(() => new AxisOutputNode());
+            ListViewModel.AddNodeType(() => new ButtonOutputNode());
 
             var startingPoint = new Point(100, 100);
 

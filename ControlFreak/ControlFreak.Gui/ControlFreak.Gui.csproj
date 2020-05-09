@@ -138,6 +138,10 @@
     <Compile Include="IONodes\AxisOutput\AxisOutputView.xaml.cs">
       <DependentUpon>AxisOutputView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IONodes\ButtonOutput\ButtonOutputNode.cs" />
+    <Compile Include="IONodes\ButtonOutput\ButtonOutputView.xaml.cs">
+      <DependentUpon>ButtonOutputView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Plugins\AxisSummerViewModel.cs" />
     <Compile Include="ViewModels\IntegerValueEditorViewModel.cs" />
@@ -146,6 +150,10 @@
       <DependentUpon>IntegerValueEditorView.xaml</DependentUpon>
     </Compile>
     <Page Include="IONodes\AxisOutput\AxisOutputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IONodes\ButtonOutput\ButtonOutputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
