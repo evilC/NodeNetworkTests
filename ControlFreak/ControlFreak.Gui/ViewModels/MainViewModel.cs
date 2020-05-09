@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Reactive.Linq;
 using System.Windows;
 using ControlFreak.Gui.ViewModels.Plugins;
 using DynamicData;
@@ -40,6 +41,12 @@ namespace ControlFreak.Gui.ViewModels
             NetworkViewModel.Nodes.Add(input1);
             input1.Position = startingPoint;
 
+            var output = new OutputNodeViewModel();
+            NetworkViewModel.Nodes.Add(output);
+            output.Position = new Point(startingPoint.X + 400, startingPoint.Y + 100);
+
+            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(output.ResultInput, input1.Output));
+
             NetworkViewModel.Validator = network =>
             {
                 var containsLoops = GraphAlgorithms.FindLoops(network).Any();
@@ -51,9 +58,9 @@ namespace ControlFreak.Gui.ViewModels
                 return new NetworkValidationResult(true, true, null);
             };
 
-            //output.ResultInput.ValueChanged
-            //    .Select(v => (NetworkViewModel.LatestValidation?.IsValid ?? true) ? v.ToString() : "Error")
-            //    .BindTo(this, vm => vm.ValueLabel);
+            output.ResultInput.ValueChanged
+                .Select(v => (NetworkViewModel.LatestValidation?.IsValid ?? true) ? v.ToString() : "Error")
+                .BindTo(this, vm => vm.ValueLabel);
 
         }
     }
