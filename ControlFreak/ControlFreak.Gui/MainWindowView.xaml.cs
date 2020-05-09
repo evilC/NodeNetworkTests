@@ -1,7 +1,6 @@
 ﻿using System.Reactive.Disposables;
 using System.Windows;
 using ControlFreak.Gui.ViewModels;
-using ControlFreak.Gui.ViewModels.Plugins;
 using DynamicData;
 using NodeNetwork.ViewModels;
 using ReactiveUI;

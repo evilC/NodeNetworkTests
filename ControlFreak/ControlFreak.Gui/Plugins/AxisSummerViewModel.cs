@@ -1,11 +1,12 @@
 ﻿using System.Reactive.Linq;
+using ControlFreak.Gui.ViewModels;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
 using NodeNetwork.Views;
 using ReactiveUI;
 
-namespace ControlFreak.Gui.ViewModels.Plugins
+namespace ControlFreak.Gui.Plugins
 {
     public class AxisSummerViewModel : NodeViewModel
     {
