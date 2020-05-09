@@ -27,6 +27,7 @@ namespace ControlFreak.Gui.ViewModels
         {
             ListViewModel.AddNodeType(() => new AxisSummerViewModel());
             ListViewModel.AddNodeType(() => new FakeAxisInputViewModel());
+            ListViewModel.AddNodeType(() => new FakeButtonInputViewModel());
             ListViewModel.AddNodeType(() => new AxisOutputNode());
             ListViewModel.AddNodeType(() => new ButtonOutputNode());
 
