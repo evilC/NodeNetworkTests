@@ -41,18 +41,6 @@ namespace ControlFreak.Gui
             {
                 this.OneWayBind(ViewModel, vm => vm.ListViewModel, v => v.nodeList.ViewModel).DisposeWith(d);
                 this.OneWayBind(ViewModel, vm => vm.NetworkViewModel, v => v.viewHost.ViewModel).DisposeWith(d);
-                this.OneWayBind(ViewModel, vm => vm.ValueLabel, v => v.valueLabel.Content).DisposeWith(d);
-
-                //this.BindCommand(ViewModel, vm => vm.AutoLayout, v => v.autoLayoutButton);
-                //this.BindCommand(ViewModel, vm => vm.StartAutoLayoutLive, v => v.startAutoLayoutLiveButton);
-                //this.WhenAnyObservable(v => v.ViewModel.StartAutoLayoutLive.IsExecuting)
-                //    .Select((isRunning) => isRunning ? Visibility.Collapsed : Visibility.Visible)
-                //    .BindTo(this, v => v.startAutoLayoutLiveButton.Visibility);
-
-                //this.BindCommand(ViewModel, vm => vm.StopAutoLayoutLive, v => v.stopAutoLayoutLiveButton);
-                //this.WhenAnyObservable(v => v.ViewModel.StartAutoLayoutLive.IsExecuting)
-                //    .Select((isRunning) => isRunning ? Visibility.Visible : Visibility.Collapsed)
-                //    .BindTo(this, v => v.stopAutoLayoutLiveButton.Visibility);
             });
         }
 

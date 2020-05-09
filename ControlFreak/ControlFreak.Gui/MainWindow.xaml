@@ -24,10 +24,6 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <reactiveUi:ViewModelViewHost Grid.Row="0" x:Name="viewHost" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
-                <Label Content="Current value:" FontSize="16"/>
-                <Label x:Name="valueLabel" FontSize="16"/>
-            </StackPanel>
         </Grid>
     </Grid>
 </Window>

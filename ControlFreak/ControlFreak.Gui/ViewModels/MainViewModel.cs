@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Reactive.Linq;
 using System.Windows;
+using ControlFreak.Gui.IONodes.AxisOutput;
 using ControlFreak.Gui.ViewModels.Plugins;
 using DynamicData;
 using NodeNetwork;
@@ -33,6 +34,8 @@ namespace ControlFreak.Gui.ViewModels
         public MainViewModel()
         {
             ListViewModel.AddNodeType(() => new AxisSummerViewModel());
+            ListViewModel.AddNodeType(() => new FakeAxisInputViewModel());
+            ListViewModel.AddNodeType(() => new AxisOutputNode());
 
             var startingPoint = new Point(100, 100);
 
@@ -51,13 +54,13 @@ namespace ControlFreak.Gui.ViewModels
             sum.Position = startingPoint;
             sum.Position = new Point(startingPoint.X + 250, startingPoint.Y + 50);
 
-            var axisOutput = new AxisOutputNodeViewModel();
+            var axisOutput = new AxisOutputNode();
             NetworkViewModel.Nodes.Add(axisOutput);
             axisOutput.Position = new Point(startingPoint.X + 500, startingPoint.Y + 100);
 
             NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(sum.Input1, input1.Output));
             NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(sum.Input2, input2.Output));
-            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(axisOutput.ResultInput, sum.Output));
+            NetworkViewModel.Connections.Add(NetworkViewModel.ConnectionFactory(axisOutput.Input, sum.Output));
 
             NetworkViewModel.Validator = network =>
             {
@@ -69,11 +72,6 @@ namespace ControlFreak.Gui.ViewModels
 
                 return new NetworkValidationResult(true, true, null);
             };
-
-            axisOutput.ResultInput.ValueChanged
-                .Select(v => (NetworkViewModel.LatestValidation?.IsValid ?? true) ? v.ToString() : "Error")
-                .BindTo(this, vm => vm.ValueLabel);
-
         }
     }
 
