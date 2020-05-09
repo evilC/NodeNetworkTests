@@ -1,4 +1,5 @@
 ﻿using System;
+using ControlFreak.Gui.Ports.Axis;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
@@ -29,6 +30,7 @@ namespace ControlFreak.Gui.IONodes.AxisOutput
             Input = new ValueNodeInputViewModel<short?>
             {
                 Name = "Input",
+                Port = new AxisPortViewModel(),
             };
 
             Inputs.Add(Input);

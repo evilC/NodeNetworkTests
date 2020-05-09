@@ -1,5 +1,6 @@
 ﻿using System.Reactive.Linq;
 using ControlFreak.Gui.Editors.ShortValueEditor;
+using ControlFreak.Gui.Ports.Axis;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
@@ -21,6 +22,7 @@ namespace ControlFreak.Gui.Plugins
             Input1 = new ValueNodeInputViewModel<short?>
             {
                 Name = "Input 1",
+                Port = new AxisPortViewModel(),
                 Editor = new ShortValueEditorViewModel()
             };
             Inputs.Add(Input1);
@@ -28,6 +30,7 @@ namespace ControlFreak.Gui.Plugins
             Input2 = new ValueNodeInputViewModel<short?>
             {
                 Name = "Input 2",
+                Port = new AxisPortViewModel(),
                 Editor = new ShortValueEditorViewModel()
             };
             Inputs.Add(Input2);
@@ -38,6 +41,7 @@ namespace ControlFreak.Gui.Plugins
             Output = new ValueNodeOutputViewModel<short?>
             {
                 Name = "Output",
+                Port = new AxisPortViewModel(),
                 Value = sum
             };
             Outputs.Add(Output);

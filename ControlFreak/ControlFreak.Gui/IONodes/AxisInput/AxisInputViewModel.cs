@@ -1,4 +1,5 @@
 ﻿using ControlFreak.Gui.Editors.ShortValueEditor;
+using ControlFreak.Gui.Ports.Axis;
 using DynamicData;
 using NodeNetwork.Toolkit.ValueNode;
 using NodeNetwork.ViewModels;
@@ -25,6 +26,7 @@ namespace ControlFreak.Gui.IONodes.AxisInput
             Output = new ValueNodeOutputViewModel<short?>
             {
                 Name = "Value",
+                Port = new AxisPortViewModel(),
                 Editor = ValueEditor,
                 Value = this.WhenAnyValue(vm => vm.ValueEditor.Value)
             };
