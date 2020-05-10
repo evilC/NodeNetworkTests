@@ -5,6 +5,7 @@ using ControlFreak.Gui.IONodes.AxisOutput;
 using ControlFreak.Gui.IONodes.ButtonInput;
 using ControlFreak.Gui.IONodes.ButtonOutput;
 using ControlFreak.Gui.Plugins;
+using ControlFreak.Gui.Plugins.AxisToButtons;
 using ControlFreak.Gui.Plugins.ButtonsToAxis;
 using DynamicData;
 using NodeNetwork;
@@ -34,8 +35,8 @@ namespace ControlFreak.Gui
             ListViewModel.AddNodeType(() => new ButtonOutputNode());
 
             // Plugins
-            ListViewModel.AddNodeType(() => new AxisSummerViewModel());
             ListViewModel.AddNodeType(() => new ButtonsToAxisViewModel());
+            ListViewModel.AddNodeType(() => new AxisToButtonsViewModel());
 
             var startingPoint = new Point(100, 100);
 

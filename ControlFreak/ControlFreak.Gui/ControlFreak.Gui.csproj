@@ -144,7 +144,6 @@
     </Compile>
     <Compile Include="Editors\BoolValueEditor\BoolValueEditorViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
-    <Compile Include="Plugins\AxisSummerViewModel.cs" />
     <Compile Include="Editors\ShortValueEditor\ShortValueEditorViewModel.cs" />
     <Compile Include="IONodes\AxisInput\AxisInputViewModel.cs" />
     <Compile Include="IONodes\ButtonInput\ButtonInputViewModel.cs" />
@@ -192,6 +191,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Plugins\AxisToButtons\AxisToButtonsViewModel.cs" />
     <Compile Include="Plugins\ButtonsToAxis\ButtonsToAxisViewModel.cs" />
     <Compile Include="Ports\Axis\AxisPortView.xaml.cs">
       <DependentUpon>AxisPortView.xaml</DependentUpon>
